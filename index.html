@@ -3,183 +3,140 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Bergverket lager nettbutikker og nettsider for bedrifter som vil selge mer på nett, og bruker AI-agenter til grovarbeidet.">
-<meta property="og:title" content="Bergverket">
-<meta property="og:description" content="Vi graver fram nettbutikker som selger.">
+<title>Bergverket · Nettbutikker og nettsider som selger</title>
+<meta name="description" content="Bergverket lager nettbutikker i Shopify og nettsider for bedrifter som vil selge mer på nett. AI-agenter tar grovarbeidet, så du får mer gjort for pengene.">
+<link rel="canonical" href="https://bergverket.no/">
+<meta name="theme-color" content="#101315">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Bergverket">
+<meta property="og:title" content="Bergverket · Vi graver fram nettbutikker som selger">
+<meta property="og:description" content="Nettbutikker i Shopify, nettsider og AI-agenter som holder butikken i gang. To berg, ett verk.">
 <meta property="og:url" content="https://bergverket.no/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 28 12 8l6 11 4-6 8 15Z' fill='%2316191c'/%3E%3Cpath d='M12 8l3 6-3 2-3-2Z' fill='%23b4532a'/%3E%3C/svg%3E">
-<style>*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
-<title>Bergverket</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: en loddrett sjakt ned gjennom siden. Hver seksjon er et lag i fjellet, merket med dybde. */
-:root {
-  --stone: #e7e9ea;      /* granitt, lys */
-  --stone-2: #d9dcde;    /* dypere lag */
-  --ink: #16191c;        /* tekst */
-  --muted: #5b6268;      /* dempet tekst */
-  --line: #bfc4c8;       /* skillelinjer */
-  --ore: #b4532a;        /* kobbermalm, aksent */
-  --ore-ink: #ffffff;    /* tekst på aksent */
-  --card: #f3f4f5;       /* flater */
-  --display: "Big Shoulders Display", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
-  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+<meta property="og:image" content="https://bergverket.no/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bergverket. Vi graver fram nettbutikker som selger.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/big-shoulders.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plex-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Bergverket",
+  "url": "https://bergverket.no/",
+  "logo": "https://bergverket.no/apple-touch-icon.png",
+  "image": "https://bergverket.no/assets/og.jpg",
+  "email": "hei@bergverket.no",
+  "description": "Nettbutikker i Shopify, nettsider og automatisering med AI-agenter.",
+  "areaServed": "NO",
+  "founder": [
+    { "@type": "Person", "name": "Fabian Berg" },
+    { "@type": "Person", "name": "Viktor Mellberg" }
+  ],
+  "knowsAbout": ["Shopify", "Nettbutikk", "Nettside", "Søkemotoroptimalisering", "Automatisering", "AI-agenter"]
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --stone: #121518; --stone-2: #0d0f11; --ink: #e9ebec; --muted: #9aa2a8;
-    --line: #2b3136; --ore: #e0773f; --ore-ink: #121518; --card: #191d21;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --stone: #121518; --stone-2: #0d0f11; --ink: #e9ebec; --muted: #9aa2a8;
-  --line: #2b3136; --ore: #e0773f; --ore-ink: #121518; --card: #191d21;
-  color-scheme: dark;
-}
-
-body { background: var(--stone); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--stone); }
-a { color: inherit; }
-:focus-visible { outline: 2px solid var(--ore); outline-offset: 3px; }
-
-.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-
-/* Toppen */
-.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--stone) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
-.mark { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 900; font-size: 26px; letter-spacing: .04em; text-transform: uppercase; }
-.mark svg { width: 30px; height: 30px; flex: none; }
-.nav { display: flex; gap: 22px; font-size: 15px; font-weight: 500; }
-.nav a { text-decoration: none; color: var(--muted); }
-.nav a:hover { color: var(--ink); }
-
-/* Overflaten */
-.hero { padding-block: 72px 56px; }
-.hero .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: end; }
-.depth { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--ore); display: flex; align-items: center; gap: 10px; }
-.depth::before { content: ""; width: 28px; height: 2px; background: var(--ore); }
-h1 { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(56px, 10vw, 128px); line-height: .88; letter-spacing: .005em; margin: 18px 0 0; text-wrap: balance; }
-h1 em { font-style: normal; color: var(--ore); }
-.lead { font-size: 19px; max-width: 34ch; color: var(--ink); margin: 0; }
-.ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; font-weight: 600; font-size: 16px; text-decoration: none; border: 2px solid var(--ink); }
-.btn--fill { background: var(--ore); border-color: var(--ore); color: var(--ore-ink); }
-.btn--line:hover { background: var(--ink); color: var(--stone); }
-.btn--fill:hover { filter: brightness(1.08); }
-
-/* Lagdelt fjell som skille */
-.strata { height: 54px; background:
-  linear-gradient(var(--line), var(--line)) 0 0 / 100% 1px no-repeat,
-  repeating-linear-gradient(176deg, transparent 0 9px, color-mix(in srgb, var(--ink) 7%, transparent) 9px 10px),
-  var(--stone-2); }
-
-/* Seksjoner */
-section.layer { padding-block: 72px; }
-section.layer:nth-of-type(even) { background: var(--stone-2); }
-.layer-head { display: grid; grid-template-columns: 220px 1fr; gap: 32px; margin-bottom: 36px; }
-h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(36px, 5vw, 56px); line-height: .95; margin: 0; text-wrap: balance; }
-.layer-head p { color: var(--muted); margin: 10px 0 0; max-width: 60ch; }
-
-.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.tool { background: var(--card); border: 1px solid var(--line); padding: 26px; display: flex; flex-direction: column; gap: 12px; }
-.tool h3 { font-family: var(--display); font-weight: 800; font-size: 28px; text-transform: uppercase; margin: 0; line-height: 1; }
-.tool p { margin: 0; color: var(--muted); }
-.tool ul { margin: 4px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 15px; }
-.tool li { padding-left: 18px; position: relative; }
-.tool li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 8px; background: var(--ore); transform: rotate(45deg); }
-.ico { width: 40px; height: 40px; color: var(--ore); }
-
-/* Sjakta: prosessen */
-.shaft { display: grid; gap: 0; border-left: 2px solid var(--ore); margin-left: 6px; }
-.step { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 8px 0 34px 28px; position: relative; }
-.step::before { content: ""; position: absolute; left: -9px; top: 14px; width: 16px; height: 16px; background: var(--stone); border: 2px solid var(--ore); transform: rotate(45deg); }
-section.layer:nth-of-type(even) .step::before { background: var(--stone-2); }
-.step .m { font-family: var(--mono); font-size: 14px; color: var(--ore); padding-top: 8px; font-variant-numeric: tabular-nums; }
-.step h3 { font-family: var(--display); font-weight: 800; font-size: 30px; text-transform: uppercase; margin: 0; }
-.step p { margin: 6px 0 0; color: var(--muted); max-width: 58ch; }
-
-/* Første funn */
-.find { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; background: var(--card); border: 1px solid var(--line); padding: 32px; }
-.find .tag { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-.find h3 { font-family: var(--display); font-weight: 900; font-size: clamp(34px, 4.5vw, 52px); text-transform: uppercase; margin: 6px 0 10px; line-height: .95; }
-.find p { margin: 0; color: var(--muted); }
-.facts { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
-.fact { border-top: 2px solid var(--ore); padding-top: 10px; }
-.fact b { display: block; font-family: var(--display); font-weight: 900; font-size: 40px; line-height: 1; font-variant-numeric: tabular-nums; }
-.fact span { font-size: 14px; color: var(--muted); }
-
-/* Folka */
-.duo { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
-.person { display: flex; gap: 18px; align-items: center; padding: 22px; border: 1px solid var(--line); background: var(--card); }
-.mono-badge { width: 64px; height: 64px; flex: none; display: grid; place-items: center; font-family: var(--display); font-weight: 900; font-size: 26px; background: var(--ink); color: var(--stone); }
-.person b { font-family: var(--display); font-size: 26px; text-transform: uppercase; font-weight: 800; display: block; line-height: 1.05; }
-.person span { color: var(--muted); font-size: 15px; }
-.motto { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(28px, 4vw, 40px); margin: 28px 0 0; }
-.motto em { font-style: normal; color: var(--ore); }
-
-/* Kontakt */
-.contact { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; }
-.mailbox { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; background: var(--card); border: 1px solid var(--line); padding: 18px 20px; }
-.mailbox code { font-family: var(--mono); font-size: 18px; user-select: all; flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
-.copy { font: inherit; font-size: 14px; font-weight: 600; padding: 8px 14px; border: 2px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; }
-.copy:hover { background: var(--ink); color: var(--stone); }
-.small { font-size: 14px; color: var(--muted); margin-top: 10px; }
-
-footer { border-top: 1px solid var(--line); }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-block: 26px; font-family: var(--mono); font-size: 13px; color: var(--muted); }
-
-@media (max-width: 860px) {
-  .hero .wrap, .layer-head, .find, .contact { grid-template-columns: 1fr; }
-  .grid3 { grid-template-columns: 1fr; }
-  .duo { grid-template-columns: 1fr; }
-  .step { grid-template-columns: 1fr; gap: 2px; }
-  .nav { display: none; }
-  .hero { padding-block: 48px 40px; }
-  section.layer { padding-block: 56px; }
-}
-@media (max-width: 480px) {
-  .facts { grid-template-columns: 1fr 1fr; }
-  .find { padding: 22px; }
-}
-@media (prefers-reduced-motion: no-preference) {
-  .hero h1 { animation: rise .7s ease-out both; }
-  .hero .lead, .hero .ctas { animation: rise .7s .15s ease-out both; }
-  @keyframes rise { from { transform: translateY(14px); opacity: .001; } to { transform: none; opacity: 1; } }
-}
-</style>
+</script>
 </head>
 <body>
+<a class="skip" href="#innhold">Hopp til innholdet</a>
+
 <header class="top">
   <div class="wrap">
     <a class="mark" href="#top" aria-label="Bergverket, til toppen">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 28 12 8l6 11 4-6 8 15Z" fill="currentColor"/><path d="M12 8l3 6-3 2-3-2Z" fill="var(--ore)"/></svg>
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M1.5 28.5 12 8.5l5.2 9.6 4-6.1 9.3 16.5Z" fill="currentColor"/><path d="M11.2 15h1.6v8.6h-1.6Z" fill="#101315"/><path d="m12 21.3 3 3-3 3-3-3Z" fill="#e57a41"/></svg>
       Bergverket
     </a>
-    <nav class="nav" aria-label="Hovedmeny">
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meny"><span aria-hidden="true"></span>Meny</button>
+    <nav class="nav" id="meny" aria-label="Hovedmeny">
       <a href="#tjenester">Tjenester</a>
       <a href="#slik">Slik jobber vi</a>
+      <a href="#arbeid" data-needs="arbeid">Arbeid</a>
+      <a href="#priser">Priser</a>
       <a href="#oss">Om oss</a>
-      <a href="#kontakt">Kontakt</a>
+      <a class="btn btn--ore" href="#kontakt">Start et prosjekt</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <section class="hero">
+<div class="gauge" aria-hidden="true">
+  <span class="gauge__read" id="gaugeRead">0 m</span>
+  <span class="gauge__rail" id="gaugeRail"></span>
+  <span class="gauge__read" id="gaugeName">Overflaten</span>
+</div>
+
+<main id="innhold">
+
+  <!-- 0 m · Overflaten -->
+  <section class="hero dark" id="top" data-depth="0" data-name="Overflaten">
     <div class="wrap">
       <div>
         <div class="depth">0 m · Overflaten</div>
         <h1>Vi graver fram nett&shy;butikker <em>som selger.</em></h1>
-      </div>
-      <div>
-        <p class="lead">Bergverket lager nettbutikker og nettsider for bedrifter som vil selge mer på nett. Det kjedelige grovarbeidet gjør AI-agentene våre, så du får mer for pengene.</p>
+        <p class="lead">Bergverket lager nettbutikker i Shopify og nettsider for bedrifter som vil selge mer på nett. AI-agentene våre tar grovarbeidet, så du får mer gjort for pengene.</p>
         <div class="ctas">
-          <a class="btn btn--fill" href="#kontakt">Ta en prat</a>
-          <a class="btn btn--line" href="#tjenester">Se hva vi lager</a>
+          <a class="btn btn--ore" href="#kontakt">Start et prosjekt
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a>
+          <a class="btn btn--ghost" href="#tjenester">Se hva vi lager</a>
+        </div>
+        <p class="note">Første prat er uforpliktende.</p>
+      </div>
+
+      <figure class="section-cut" aria-label="Tverrsnitt: det vi bygger, lag for lag">
+        <figcaption class="section-cut__head"><span>Tverrsnitt</span><span>Nettbutikk</span></figcaption>
+        <div class="cut-wrap">
+        <ol class="cut">
+          <li><b>Design<small>Tema, logo og sider som ligner deg</small></b><i>−10 m</i></li>
+          <li><b>Varer<small>Import fra regneark og bilder</small></b><i>−40 m</i></li>
+          <li><b>Kasse<small>Betaling, frakt og vilkår på norsk</small></b><i>−120 m</i></li>
+          <li><b>Synlighet<small>Google, sosiale medier og måling</small></b><i>−300 m</i></li>
+          <li><b>Agenter<small>Faste oppgaver som går av seg selv</small></b><i>−600 m</i></li>
+        </ol>
+        <span class="cage" aria-hidden="true"></span>
+        </div>
+      </figure>
+    </div>
+  </section>
+  <div class="core dark" aria-label="Dette er med">
+    <div class="wrap">
+      <ul>
+        <li>Shopify</li><li>Design</li><li>Produktimport</li><li>Betaling og frakt</li><li>SEO</li><li>Måling</li><li>Agenter</li><li>Drift</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- −20 m · Hvorfor -->
+  <section class="layer light" id="hvorfor" data-depth="20" data-name="Grunnfjellet">
+    <div class="wrap">
+      <div class="layer-head">
+        <div class="depth">−20 m · Grunnfjellet</div>
+        <div>
+          <h2>Mer butikk, <em>mindre styr</em></h2>
+          <p>De fleste små bedrifter har ikke tid til å bygge og passe på en nettbutikk. Det er det vi er her for.</p>
+        </div>
+      </div>
+      <div class="why reveal">
+        <div>
+          <span class="n">01</span>
+          <h3>Én kontakt</h3>
+          <p>Du snakker med de samme to folka fra første prat til butikken går. Ingen kø, ingen videresending.</p>
+        </div>
+        <div>
+          <span class="n">02</span>
+          <h3>Agenter på jobb</h3>
+          <p>Produkttekster, import, rapporter og sjekker gjør AI-agentene våre. Vi bruker tiden på det som faktisk selger.</p>
+        </div>
+        <div>
+          <span class="n">03</span>
+          <h3>Du eier alt</h3>
+          <p>Butikken, domenet og kundene står på deg. Vil du gå videre uten oss, tar du med deg alt.</p>
         </div>
       </div>
     </div>
@@ -187,153 +144,411 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
   <div class="strata" aria-hidden="true"></div>
 
-  <section class="layer" id="tjenester">
+  <!-- −40 m · Tjenester -->
+  <section class="layer light-2" id="tjenester" data-depth="40" data-name="Malmen">
     <div class="wrap">
       <div class="layer-head">
         <div class="depth">−40 m · Malmen</div>
         <div>
           <h2>Dette lager vi</h2>
-          <p>Tre ting, gjort ordentlig. Du får én kontakt og en side du faktisk forstår selv.</p>
+          <p>Fire ting, gjort ordentlig. Du kan ta én av dem, eller hele veien fra idé til butikk som går av seg selv.</p>
         </div>
       </div>
-      <div class="grid3">
-        <article class="tool">
-          <svg class="ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 14h26l-2.5 18h-21Z"/><path d="M14 14a6 6 0 0 1 12 0"/></svg>
+      <div class="services reveal">
+        <article class="svc">
+          <div class="svc__top">
+            <svg class="ico" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M8 15h28l-2.8 21H10.8Z"/><path d="M15.5 15a6.5 6.5 0 0 1 13 0"/></svg>
+            <span class="tag">Shopify</span>
+          </div>
           <h3>Nettbutikk</h3>
-          <p>Komplett butikk i Shopify, klar til å ta imot ordre.</p>
-          <ul>
-            <li>Oppsett, design og kasse</li>
-            <li>Import av varer fra regneark og bilder</li>
-            <li>Betaling, frakt og vilkår på norsk</li>
+          <p>En komplett butikk som er klar til å ta imot ordre fra dag én.</p>
+          <ul class="ticks">
+            <li>Oppsett, tema og design som passer merkevaren</li>
+            <li>Import av varer fra regneark, bilder eller kassesystem</li>
+            <li>Betaling, frakt, vilkår og e-poster på norsk</li>
+            <li>Opplæring, så du kan drive den selv</li>
           </ul>
         </article>
-        <article class="tool">
-          <svg class="ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="5" y="8" width="30" height="22"/><path d="M5 14h30M13 34h14"/></svg>
+        <article class="svc">
+          <div class="svc__top">
+            <svg class="ico" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="6" y="9" width="32" height="23"/><path d="M6 15h32M15 37h14"/></svg>
+            <span class="tag">Nettside</span>
+          </div>
           <h3>Nettside</h3>
-          <p>Rask og ryddig side som viser hvem du er og får folk til å ta kontakt.</p>
-          <ul>
+          <p>En rask og ryddig side som viser hvem du er og får folk til å ta kontakt.</p>
+          <ul class="ticks">
             <li>Bygget for mobil først</li>
-            <li>Synlig i Google fra dag én</li>
-            <li>Lett å oppdatere selv</li>
+            <li>Laster raskt og er lett å finne i Google</li>
+            <li>Tekster som sier det viktigste kort</li>
+            <li>Lett å oppdatere</li>
           </ul>
         </article>
-        <article class="tool">
-          <svg class="ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M8 32 22 18"/><path d="M18 8c6 0 12 4 14 10-6-2-10-2-14 0-2-4-2-6 0-10Z"/></svg>
+        <article class="svc">
+          <div class="svc__top">
+            <svg class="ico" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 35 24 20"/><path d="M20 8c7 0 13 4.5 15.5 11-6.5-2.2-11-2.2-15.5 0-2.2-4.4-2.2-6.6 0-11Z"/></svg>
+            <span class="tag">AI-agenter</span>
+          </div>
           <h3>Automatisering</h3>
-          <p>Agenter som tar de faste oppgavene i butikken din, hver uke.</p>
-          <ul>
-            <li>Produkttekster og nye varer</li>
-            <li>Rapporter om salg og besøk</li>
-            <li>Sjekk av feil før kundene ser dem</li>
+          <p>Agenter som tar de faste oppgavene i butikken din, uke etter uke.</p>
+          <ul class="ticks">
+            <li>Produkttekster og nye varer fra bilder</li>
+            <li>Ukesrapport om salg og besøk</li>
+            <li>Sjekk av feil, tomme varer og døde lenker</li>
+            <li>Tilpasset akkurat din butikk</li>
+          </ul>
+        </article>
+        <article class="svc">
+          <div class="svc__top">
+            <svg class="ico" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 34h32"/><path d="M10 34V22l8-5v17M18 34V12l10-5v27M28 34V18l6 3v13"/></svg>
+            <span class="tag">Vekst</span>
+          </div>
+          <h3>Synlighet og drift</h3>
+          <p>En butikk som ingen finner, selger ikke. Vi hjelper deg å bli sett og holder ting i gang.</p>
+          <ul class="ticks">
+            <li>Google, Facebook og Instagram koblet til butikken</li>
+            <li>Måling, så du ser hva som virker</li>
+            <li>SEO på sider og produkter</li>
+            <li>Endringer og forbedringer når du trenger dem</li>
           </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="layer" id="slik">
+  <div class="strata strata--rock" aria-hidden="true"></div>
+
+  <!-- −80 m · Agentene -->
+  <section class="layer dark" id="agenter" data-depth="80" data-name="Maskinrommet">
+    <div class="wrap">
+      <div class="layer-head">
+        <div class="depth">−80 m · Maskinrommet</div>
+        <div>
+          <h2>Agenter som <em>jobber nattskift</em></h2>
+        </div>
+      </div>
+      <div class="agents">
+        <div class="copy reveal">
+          <p>Hver kunde får sine egne agenter: små AI-assistenter som kjenner butikken din og gjør de faste oppgavene. De skriver, sjekker og rapporterer. Vi følger med og tar avgjørelsene.</p>
+          <p>Det betyr at du får mer gjort for pengene, og at ting blir gjort hver uke, ikke bare når noen husker det.</p>
+          <ul class="ticks">
+            <li>Ingenting publiseres eller sendes uten at et menneske har sagt ja</li>
+            <li>Du får beskjed på e-post, kort og konkret</li>
+            <li>Agentene kan skrus av og på når du vil</li>
+          </ul>
+        </div>
+        <div class="log reveal" role="group" aria-label="Eksempel på en uke med agenter">
+          <div class="log__bar"><span>Agentlogg</span><span>Eksempel</span></div>
+          <ol>
+            <li><time>Man 07.00</time><span>Ukesrapport sendt<em>Salg, besøk og de fem mest solgte varene</em></span></li>
+            <li><time>Man 07.05</time><span>Sjekket 214 produktsider<em>3 mangler bilde, 1 lenke virker ikke. Lagt på listen.</em></span></li>
+            <li><time>Tir 14.20</time><span>12 nye varer fra bilder<em>Tekst, kategori og SEO klart til godkjenning</em></span></li>
+            <li><time>Ons 09.00</time><span>Lav beholdning<em>4 varer har under 2 igjen</em></span></li>
+            <li><time>Fre 16.00</time><span>Utkast til nyhetsbrev<em>Venter på ditt ja</em></span></li>
+          </ol>
+          <div class="log__foot">Eksempel på hva en agent kan gjøre. Oppgavene settes opp for hver butikk.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strata" aria-hidden="true"></div>
+
+  <!-- −120 m · Prosess -->
+  <section class="layer light-2" id="slik" data-depth="120" data-name="Sjakta">
     <div class="wrap">
       <div class="layer-head">
         <div class="depth">−120 m · Sjakta</div>
         <div>
           <h2>Slik jobber vi</h2>
-          <p>Fra første prat til butikken går av seg selv.</p>
+          <p>Fra første prat til butikken går av seg selv. Du ser alt underveis og sier fra når noe ikke sitter.</p>
         </div>
       </div>
-      <div class="shaft">
-        <div class="step">
-          <div class="m">Først</div>
-          <div><h3>Prøveboring</h3><p>Vi tar en prat, ser på det du har og finner ut hva som skal selges, til hvem og hvordan.</p></div>
-        </div>
-        <div class="step">
-          <div class="m">Så</div>
-          <div><h3>Utgraving</h3><p>Vi bygger siden, legger inn varene og kobler betaling og frakt. Du ser alt underveis og sier fra.</p></div>
-        </div>
-        <div class="step">
-          <div class="m">Etter åpning</div>
-          <div><h3>Drift</h3><p>Agentene holder butikken ved like. Vi følger med på tallene og sier fra når noe kan bli bedre.</p></div>
-        </div>
-      </div>
+      <ol class="shaft reveal">
+        <li class="step">
+          <div class="m">01 · Prøveboring</div>
+          <div><h3>Vi tar en prat</h3><p>Vi ser på det du har, og finner ut hva som skal selges, til hvem og hvordan. Du får et tydelig forslag med pris og tidsplan.</p></div>
+          <div class="out"><b>Du får</b>Forslag med pris og plan</div>
+        </li>
+        <li class="step">
+          <div class="m">02 · Kartlegging</div>
+          <div><h3>Plan og innhold</h3><p>Vi samler varer, bilder, tekster og logo, og bestemmer hvordan butikken skal se ut og fungere.</p></div>
+          <div class="out"><b>Du får</b>Skisse og liste over innhold</div>
+        </li>
+        <li class="step">
+          <div class="m">03 · Utgraving</div>
+          <div><h3>Vi bygger</h3><p>Vi setter opp butikken, legger inn varene og kobler betaling og frakt. Du kan følge med og teste hele veien.</p></div>
+          <div class="out"><b>Du får</b>En butikk du kan klikke rundt i</div>
+        </li>
+        <li class="step">
+          <div class="m">04 · Åpning</div>
+          <div><h3>Vi åpner</h3><p>Vi tester kjøp, frakt og e-poster, kobler Google og sosiale medier, og lærer deg å drive den.</p></div>
+          <div class="out"><b>Du får</b>Butikken på lufta og opplæring</div>
+        </li>
+        <li class="step">
+          <div class="m">05 · Drift</div>
+          <div><h3>Den går av seg selv</h3><p>Agentene holder butikken ved like. Vi følger med på tallene og sier fra når noe kan bli bedre.</p></div>
+          <div class="out"><b>Du får</b>Fast oppfølging og ukesrapport</div>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <section class="layer" id="funn">
+  <!-- CASE: On the Record. Trond har ikke godkjent ennå.
+       Fjern alt fra CASE-START til CASE-SLUTT for å ta den bort. Menylenken «Arbeid» skjules da av seg selv. -->
+  <!-- CASE-START -->
+  <div class="strata strata--rock" aria-hidden="true"></div>
+  <section class="layer dark" id="arbeid" data-depth="300" data-name="Første funn">
     <div class="wrap">
       <div class="layer-head">
         <div class="depth">−300 m · Første funn</div>
-        <div><h2>Det vi har gravd fram</h2></div>
-      </div>
-      <div class="find">
         <div>
-          <div class="tag">Nettbutikk · Shopify · 2026</div>
-          <h3>On the Record</h3>
-          <p>Nettbutikk for platesjappa On the Record i Trondheim: eget tema, import av lageret fra regneark og bilder, kortbetaling, frakt og måling av salg.</p>
-        </div>
-        <div class="facts">
-          <div class="fact"><b>200+</b><span>plater lagt inn</span></div>
-          <div class="fact"><b>1</b><span>eget tema</span></div>
-          <div class="fact"><b>2.12</b><span>åpningsdag</span></div>
+          <h2>Det vi har <em>gravd fram</em></h2>
         </div>
       </div>
+      <article class="case reveal">
+        <div class="case__body">
+          <span class="tag">Nettbutikk · Shopify · 2026</span>
+          <h3>On the Record</h3>
+          <p>Platesjappa On the Record i Trondheim skulle selge brukte plater på nett, ved siden av butikken. Vi bygde nettbutikken fra bunnen.</p>
+          <ul class="ticks">
+            <li>Eget tema tilpasset sjappa</li>
+            <li>Lageret lagt inn fra bilder og regneark, med agenter som skrev tekstene</li>
+            <li>Kortbetaling, frakt og vilkår på norsk</li>
+            <li>Måling av salg og besøk fra første dag</li>
+          </ul>
+        </div>
+        <div class="case__side">
+          <div class="record" aria-hidden="true">
+            <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="98" fill="#0b0d0f"/><g fill="none" stroke="#ffffff" stroke-opacity=".07"><circle cx="100" cy="100" r="88"/><circle cx="100" cy="100" r="80"/><circle cx="100" cy="100" r="72"/><circle cx="100" cy="100" r="64"/><circle cx="100" cy="100" r="56"/><circle cx="100" cy="100" r="48"/></g><path d="M100 2a98 98 0 0 1 69 28.6" stroke="#ffffff" stroke-opacity=".18" stroke-width="3" fill="none"/><circle cx="100" cy="100" r="32" fill="#e57a41"/><circle cx="100" cy="100" r="4" fill="#0b0d0f"/></svg>
+          </div>
+          <div class="facts">
+            <div class="fact"><b>200+</b><span>plater lagt inn</span></div>
+            <div class="fact"><b>2.12</b><span>åpningsdag 2026</span></div>
+            <div class="fact"><b>TRD</b><span>Trondheim</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- CASE-SLUTT -->
+
+  <div class="strata" aria-hidden="true"></div>
+
+  <!-- −400 m · Priser -->
+  <section class="layer light" id="priser" data-depth="400" data-name="Regnskapet">
+    <div class="wrap">
+      <div class="layer-head">
+        <div class="depth">−400 m · Regnskapet</div>
+        <div>
+          <h2>Fast pris, <em>ingen overraskelser</em></h2>
+          <p>Du vet hva det koster før vi begynner. Prisene under er utgangspunkt. Du får et fast tilbud etter første prat.</p>
+        </div>
+      </div>
+      <div class="plans reveal">
+        <article class="plan">
+          <h3>Nettside</h3>
+          <p class="for">For deg som trenger en side som viser hvem du er og får folk til å ta kontakt.</p>
+          <div class="price">Fra <span class="ph">[pris]</span><small>kr eks. mva</small></div>
+          <ul class="ticks">
+            <li>Opptil <span class="ph">[antall]</span> sider</li>
+            <li>Mobil, fart og Google-oppsett</li>
+            <li>Kontaktskjema</li>
+          </ul>
+          <a class="btn btn--ghost" href="#kontakt" data-pick="Nettside">Spør om nettside</a>
+        </article>
+        <article class="plan plan--main">
+          <span class="ribbon">Kjernen vår</span>
+          <h3>Nettbutikk</h3>
+          <p class="for">For deg som vil selge på nett, med alt satt opp og klart til første ordre.</p>
+          <div class="price">Fra <span class="ph">[pris]</span><small>kr eks. mva</small></div>
+          <ul class="ticks">
+            <li>Shopify med tema og design</li>
+            <li>Import av opptil <span class="ph">[antall]</span> varer</li>
+            <li>Betaling, frakt og vilkår</li>
+            <li>Opplæring og åpning</li>
+          </ul>
+          <a class="btn btn--ore" href="#kontakt" data-pick="Nettbutikk">Spør om nettbutikk</a>
+        </article>
+        <article class="plan">
+          <h3>Drift og agenter</h3>
+          <p class="for">For deg som vil at butikken skal holdes ved like uten at du må tenke på det.</p>
+          <div class="price"><span class="ph">[pris]</span><small>kr/mnd eks. mva</small></div>
+          <ul class="ticks">
+            <li>Egne agenter for butikken din</li>
+            <li>Ukesrapport om salg og besøk</li>
+            <li><span class="ph">[antall]</span> timer endringer i måneden</li>
+          </ul>
+          <a class="btn btn--ghost" href="#kontakt" data-pick="Automatisering">Spør om drift</a>
+        </article>
+      </div>
+      <p class="fine">Shopify, domene, apper og betalingsløsninger betaler du direkte til leverandøren, så alt står i ditt navn.</p>
     </div>
   </section>
 
-  <section class="layer" id="oss">
+  <div class="strata strata--rock" aria-hidden="true"></div>
+
+  <!-- −450 m · Folka -->
+  <section class="layer dark" id="oss" data-depth="450" data-name="Folka">
     <div class="wrap">
       <div class="layer-head">
         <div class="depth">−450 m · Folka</div>
         <div>
-          <h2>To berg, ett verk</h2>
-          <p>Vi heter Berg og Mellberg. Derfor Bergverket.</p>
+          <h2>To berg, <em>ett verk</em></h2>
+          <p>Vi heter Berg og Mellberg. Et bergverk er en gruve, der man graver fram det som har verdi. Derfor Bergverket.</p>
         </div>
       </div>
-      <div class="duo">
-        <div class="person"><div class="mono-badge" aria-hidden="true">FB</div><div><b>Fabian Berg</b><span>Medgründer</span></div></div>
-        <div class="person"><div class="mono-badge" aria-hidden="true">VM</div><div><b>Viktor Mellberg</b><span>Medgründer</span></div></div>
+      <div class="duo reveal">
+        <article class="person">
+          <div class="portrait" aria-hidden="true">FB<!-- Bytt med: <img src="assets/fabian.jpg" alt="" width="400" height="500"> --></div>
+          <div>
+            <h3>Fabian Berg</h3>
+            <div class="role">Medgründer · <span class="ph">[rolle]</span></div>
+            <p><span class="ph">[2–3 setninger om Fabian: bakgrunn, hva han er god på, hva han gjør i Bergverket]</span></p>
+          </div>
+        </article>
+        <article class="person">
+          <div class="portrait" aria-hidden="true">VM<!-- Bytt med: <img src="assets/viktor.jpg" alt="" width="400" height="500"> --></div>
+          <div>
+            <h3>Viktor Mellberg</h3>
+            <div class="role">Medgründer · <span class="ph">[rolle]</span></div>
+            <p><span class="ph">[2–3 setninger om Viktor: bakgrunn, hva han er god på, hva han gjør i Bergverket]</span></p>
+          </div>
+        </article>
+      </div>
+      <p class="motto" aria-hidden="true">Vi graver.<br><em>Du selger.</em></p>
+    </div>
+  </section>
+
+  <div class="strata" aria-hidden="true"></div>
+
+  <!-- −500 m · Spørsmål -->
+  <section class="layer light" id="sporsmal" data-depth="500" data-name="Spørsmål">
+    <div class="wrap">
+      <div class="layer-head">
+        <div class="depth">−500 m · Spørsmål</div>
+        <div><h2>Det folk lurer på</h2></div>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>Hvorfor Shopify?</summary>
+          <div class="a"><p>Shopify tar seg av drift, sikkerhet og betaling, så du slipper å tenke på servere og oppdateringer. Det er enkelt å bruke selv, og det fungerer godt med norske betalings- og fraktløsninger.</p></div>
+        </details>
+        <details>
+          <summary>Hvor lang tid tar det?</summary>
+          <div class="a"><p>Det kommer an på hvor mange varer du har og hvor klart innholdet er. Du får en tidsplan sammen med tilbudet etter første prat.</p></div>
+        </details>
+        <details>
+          <summary>Hva gjør AI-agentene, egentlig?</summary>
+          <div class="a"><p>De gjør faste oppgaver som ellers tar mye tid: skriver produkttekster, legger inn varer, sjekker butikken for feil og lager rapporter. Et menneske ser over før noe blir publisert eller sendt.</p></div>
+        </details>
+        <details>
+          <summary>Hvem eier butikken?</summary>
+          <div class="a"><p>Du. Butikken, domenet og alle kontoer står i ditt navn. Vi får tilgang som medarbeidere, og du kan ta den fra oss når du vil.</p></div>
+        </details>
+        <details>
+          <summary>Kan dere ta over en butikk jeg allerede har?</summary>
+          <div class="a"><p>Ja. Vi kan forbedre en Shopify-butikk du har fra før, eller flytte varene dine over fra en annen løsning.</p></div>
+        </details>
+        <details>
+          <summary>Må jeg kunne noe teknisk?</summary>
+          <div class="a"><p>Nei. Du får opplæring i det du trenger for å drive butikken selv, og vi er der hvis noe er uklart.</p></div>
+        </details>
       </div>
     </div>
   </section>
 
-  <section class="layer" id="kontakt">
+  <div class="strata strata--rock" aria-hidden="true"></div>
+
+  <!-- −600 m · Kontakt -->
+  <section class="layer dark" id="kontakt" data-depth="600" data-name="Bunnen">
     <div class="wrap">
       <div class="contact">
         <div>
           <div class="depth">−600 m · Bunnen</div>
-          <h2 style="margin-top:14px">Har du noe vi skal grave i?</h2>
-          <p class="small" style="font-size:17px">Fortell kort om bedriften din og hva du vil selge, så tar vi en prat.</p>
-        </div>
-        <div>
-          <div class="mailbox">
-            <code id="mail">hei@bergverket.no</code>
-            <button class="copy" id="copyBtn" type="button">Kopier</button>
+          <h2>Har du noe vi skal <em>grave i?</em></h2>
+          <p class="intro">Fortell kort om bedriften din og hva du vil få til. Vi svarer så fort vi kan, og første prat er uforpliktende.</p>
+          <div class="direct">
+            <div class="mailbox">
+              <a href="mailto:hei@bergverket.no" id="mail">hei@bergverket.no</a>
+              <button class="copy-btn" id="copyBtn" type="button">Kopier</button>
+            </div>
+            <p class="status" id="copyMsg" aria-live="polite"></p>
           </div>
-          <p class="small" id="copyMsg" aria-live="polite">bergverket.no</p>
         </div>
+
+        <form class="form" id="brief" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="f-navn">Navn</label>
+              <input id="f-navn" name="navn" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-firma">Bedrift <span class="hint">(valgfritt)</span></label>
+              <input id="f-firma" name="firma" autocomplete="organization">
+            </div>
+          </div>
+          <fieldset class="field">
+            <legend>Hva trenger du?</legend>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="hva" value="Nettbutikk"><span>Nettbutikk</span></label>
+              <label class="chip"><input type="checkbox" name="hva" value="Nettside"><span>Nettside</span></label>
+              <label class="chip"><input type="checkbox" name="hva" value="Automatisering"><span>Automatisering</span></label>
+              <label class="chip"><input type="checkbox" name="hva" value="Synlighet"><span>Synlighet</span></label>
+              <label class="chip"><input type="checkbox" name="hva" value="Usikker"><span>Usikker</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="f-side">Nettside i dag <span class="hint">(valgfritt)</span></label>
+            <input id="f-side" name="side" inputmode="url" placeholder="dinbedrift.no">
+          </div>
+          <div class="field">
+            <label for="f-om">Fortell litt</label>
+            <textarea id="f-om" name="om" required placeholder="Hva selger du, og hva vil du få til?"></textarea>
+          </div>
+          <p class="err" id="formErr" role="alert"></p>
+          <button class="btn btn--ore" type="submit">Lag e-post til oss
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></button>
+          <p class="fine">Knappen åpner e-postprogrammet ditt med alt ferdig utfylt. Ingenting lagres på denne siden.</p>
+        </form>
       </div>
     </div>
   </section>
 </main>
 
-<footer>
+<footer class="foot">
   <div class="wrap">
-    <span>Bergverket · Nettbutikker, nettsider og automatisering</span>
-    <span>bergverket.no</span>
+    <div class="grid">
+      <div>
+        <a class="mark" href="#top">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M1.5 28.5 12 8.5l5.2 9.6 4-6.1 9.3 16.5Z" fill="currentColor"/><path d="M11.2 15h1.6v8.6h-1.6Z" fill="#0a0c0e"/><path d="m12 21.3 3 3-3 3-3-3Z" fill="#e57a41"/></svg>
+          Bergverket
+        </a>
+        <p>Nettbutikker, nettsider og automatisering. To berg, ett verk.</p>
+      </div>
+      <div>
+        <h4>Sider</h4>
+        <ul>
+          <li><a href="#tjenester">Tjenester</a></li>
+          <li><a href="#slik">Slik jobber vi</a></li>
+          <li><a href="#priser">Priser</a></li>
+          <li><a href="#oss">Om oss</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:hei@bergverket.no">hei@bergverket.no</a></li>
+          <li><a href="personvern.html">Personvern</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>© 2026 Bergverket · Org.nr. <span class="ph">[kommer]</span></span>
+      <span>bergverket.no</span>
+    </div>
   </div>
 </footer>
 
-<script>
-document.getElementById('copyBtn').addEventListener('click', function () {
-  var text = document.getElementById('mail').textContent;
-  var msg = document.getElementById('copyMsg');
-  function fallback() {
-    var r = document.createRange(); r.selectNodeContents(document.getElementById('mail'));
-    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-    msg.textContent = 'Adressen er markert. Kopier den med cmd+C.';
-  }
-  try {
-    navigator.clipboard.writeText(text).then(function () { msg.textContent = 'Kopiert.'; }, fallback);
-  } catch (e) { fallback(); }
-});
-</script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
