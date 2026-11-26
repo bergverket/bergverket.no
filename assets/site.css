@@ -381,3 +381,19 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .top, .gauge, .form, .menu-btn, .consent { display: none !important; }
   .dark, .foot { background: #fff !important; color: #000 !important; }
 }
+
+/* Undersider (tjenester og artikler) */
+.crumbs { font-family: var(--mono); font-size: 13px; color: var(--muted); margin-bottom: 22px; display: flex; flex-wrap: wrap; gap: 6px; }
+.crumbs a { color: inherit; }
+.page .lead { max-width: 60ch; color: var(--ink); margin-bottom: 8px; }
+.page ol { padding-left: 1.3em; display: grid; gap: 8px; }
+.page .ticks a, .page p a { color: var(--ore); }
+.page .faq { margin-top: 12px; }
+.cta-box { margin-top: 56px; padding: 28px; border: 2px solid var(--ink); }
+.cta-box h2 { margin-top: 0 !important; }
+.cta-box .btn { margin: 6px 8px 0 0; }
+.related { margin-top: 48px; }
+.related h2 { font-size: 22px !important; }
+.foot .grid:has(> :nth-child(4)) { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+@media (max-width: 760px) { .foot .grid:has(> :nth-child(4)) { grid-template-columns: 1fr 1fr; } }
+.svc .more { display: inline-block; margin-top: 16px; font-weight: 600; color: var(--ore); text-underline-offset: 3px; }

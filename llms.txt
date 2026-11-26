@@ -15,9 +15,9 @@
 - Priser: står ikke på nettsiden. Kunden får et tilbud med pris og plan etter en uforpliktende første prat.
 
 ## Tjenester
-- [Nettbutikk i Shopify](https://bergverket.no/#tjenester): oppsett, tema og design, import av varer fra regneark, bilder eller kassesystem, betaling, frakt, vilkår og e-poster på norsk, og opplæring.
-- [Nettside](https://bergverket.no/#tjenester): rask, mobilvennlig nettside som er lett å finne i Google og lett å oppdatere.
-- [Automatisering med AI-agenter](https://bergverket.no/#agenter): hver kunde får egne agenter som skriver produkttekster, legger inn nye varer fra bilder, sjekker butikken for feil og døde lenker og sender ukesrapport. Et menneske godkjenner alt før det publiseres eller sendes.
+- [Nettbutikk i Shopify](https://bergverket.no/nettbutikk-shopify/): oppsett, tema og design, import av varer fra regneark, bilder eller kassesystem, betaling, frakt, vilkår og e-poster på norsk, og opplæring.
+- [Nettside](https://bergverket.no/nettside/): rask, mobilvennlig nettside som er lett å finne i Google og lett å oppdatere.
+- [Automatisering med AI-agenter](https://bergverket.no/automatisering/): hver kunde får egne agenter som skriver produkttekster, legger inn nye varer fra bilder, sjekker butikken for feil og døde lenker og sender ukesrapport. Et menneske godkjenner alt før det publiseres eller sendes.
 - [Synlighet og drift](https://bergverket.no/#tjenester): SEO på sider og produkter, Google, Facebook og Instagram koblet til butikken, måling og løpende forbedringer.
 
 ## Slik jobber vi
@@ -28,6 +28,9 @@
 - [On the Record](https://bergverket.no/#arbeid): nettbutikk i Shopify for platesjappa On the Record i Trondheim, med over 200 brukte plater lagt inn ved hjelp av agenter. Åpner 2. desember 2026.
 
 ## Mer
+- [Nettbyrå i Stavanger](https://bergverket.no/nettbyra-stavanger/)
+- [Hva koster en nettbutikk i Shopify?](https://bergverket.no/artikler/hva-koster-en-nettbutikk/)
+- [Artikler](https://bergverket.no/artikler/)
 - [Om oss](https://bergverket.no/#oss)
 - [Spørsmål og svar](https://bergverket.no/#sporsmal)
 - [Personvern](https://bergverket.no/personvern.html)
