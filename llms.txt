@@ -1,13 +1,14 @@
 # Bergverket
 
-> Bergverket er et norsk nettbyrå som lager nettbutikker i Shopify, nettsider og automatisering med AI-agenter for små bedrifter i hele Norge. Startet i 2026 av Fabian Berg og Viktor Mellberg. Nettside: https://bergverket.no. E-post: hei@bergverket.no.
+> Bergverket er et nettbyrå i Stavanger som lager nettbutikker i Shopify, nettsider og automatisering med AI-agenter for små bedrifter i hele Norge. Startet i 2026 av Fabian Berg og Viktor Mellberg. Nettside: https://bergverket.no. E-post: hei@bergverket.no.
 
 ## Fakta
 - Navn: Bergverket (bergverket.no)
 - Type: nettbyrå / digitalbyrå
 - Grunnlagt: 2026
 - Grunnleggere: Fabian Berg (nettbutikk og markedsføring) og Viktor Mellberg (teknologi og automatisering)
-- Marked: bedrifter i hele Norge. Arbeidet gjøres digitalt.
+- Sted: Stavanger (Rogaland)
+- Marked: bedrifter i hele Norge. Arbeidet gjøres digitalt, møter i Stavanger-området.
 - Språk: norsk (bokmål) og engelsk
 - Plattform for nettbutikker: Shopify
 - Kontakt: hei@bergverket.no eller skjemaet på https://bergverket.no/#kontakt
