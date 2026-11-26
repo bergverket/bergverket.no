@@ -585,3 +585,79 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .case-facts > div { padding: 0; }
 .case-facts > div + div { border-left: 0; padding-left: clamp(16px, 3vw, 36px); }
 .case-facts b { font-size: clamp(44px, 5vw, 64px); }
+
+/* ---------- Runde 4: renere flater og mer bevegelse ---------- */
+:root { --r: 14px; --r-s: 10px; --ease: cubic-bezier(.2,.7,.2,1); }
+:root { interpolate-size: allow-keywords; }
+
+/* Renere: ingen stripete bånd mellom lagene, myke hjørner */
+.strata { display: none; }
+.btn, .nav .btn, .copy-btn, .menu-btn, .chip span, .field input, .field textarea { border-radius: var(--r-s); }
+.section-cut, .log, .form, .mailbox, .person, .ig, .aside-card, .browser { border-radius: var(--r); overflow: hidden; }
+.portrait { border-radius: calc(var(--r) - 4px); }
+.btn { transition: transform .25s var(--ease), background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .25s ease; }
+.btn--ore:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px rgba(229,122,65,.7); }
+.btn--ghost:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+/* Tjenester: frittstående kort i stedet for rutenett med streker */
+.services { gap: 16px; background: none; border: 0; }
+.svc { border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); border-radius: var(--r); position: relative; overflow: hidden; }
+.svc::before { content: ""; position: absolute; inset: 0; background: radial-gradient(420px circle at var(--mx, 50%) var(--my, -20%), rgba(229,122,65,.10), transparent 60%); opacity: 0; transition: opacity .4s ease; pointer-events: none; }
+.svc:hover::before { opacity: 1; }
+.svc > * { position: relative; }
+.why { border-top-width: 1px; }
+.step .out { border-left-color: color-mix(in srgb, var(--line) 70%, transparent); }
+
+/* Lenkekort og artikler */
+.rel { gap: 12px; border: 0; background: none; }
+.rel li { border: 0; }
+.rel a { border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); border-radius: var(--r); background: var(--card); }
+
+/* Borekjerne som rullende bånd */
+.core { overflow: hidden; }
+.core .wrap { max-width: none; padding: 0; }
+.core ul { flex-wrap: nowrap; width: max-content; gap: 0 36px; padding: 18px 18px; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .core ul.is-marquee { animation: marquee 38s linear infinite; }
+  .core:hover ul { animation-play-state: paused; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+}
+@media (prefers-reduced-motion: reduce) { .core ul { flex-wrap: wrap; width: auto; max-width: 1160px; margin: 0 auto; } }
+
+/* Fremdrift øverst mens du scroller */
+.progress { position: fixed; inset: 0 0 auto; height: 2px; z-index: 30; background: var(--ore-hot); transform-origin: 0 50%; transform: scaleX(var(--sp, 0)); pointer-events: none; }
+
+/* Overskrifter kommer opp bak en maske */
+@media (prefers-reduced-motion: no-preference) {
+  .js .layer-head h2 { clip-path: inset(0 0 100% 0); transform: translateY(40%); transition: clip-path 1s var(--ease), transform 1s var(--ease); }
+  .js .layer-head.in h2 { clip-path: inset(-10% -2% -20% -2%); transform: none; }
+  .js .layer-head p, .js .layer-head .depth { opacity: .001; transform: translateY(12px); transition: opacity .8s ease .2s, transform .8s var(--ease) .2s; }
+  .js .layer-head.in p, .js .layer-head.in .depth { opacity: 1; transform: none; }
+}
+
+/* Sjakta fylles mens du scroller */
+.shaft { border-left: 0; position: relative; }
+.shaft::before, .shaft::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; }
+.shaft::before { background: color-mix(in srgb, var(--ore) 22%, transparent); }
+.shaft::after { background: var(--ore); transform-origin: top; transform: scaleY(var(--fill, 1)); }
+.js .shaft::after { transform: scaleY(var(--fill, 0)); }
+.step::before { z-index: 1; transition: background-color .4s ease, transform .5s var(--ease); }
+.step.passed::before { background: var(--ore); transform: rotate(45deg) scale(1.1); }
+
+/* Spørsmål åpnes mykt (nettlesere som støtter det) */
+.faq details::details-content { block-size: 0; overflow: hidden; transition: block-size .4s var(--ease), content-visibility .4s allow-discrete; }
+.faq details[open]::details-content { block-size: auto; }
+.faq summary { transition: color .2s ease, padding-left .3s var(--ease); }
+.faq summary:hover { padding-left: 6px; }
+
+/* Folka og skjema: lys som følger musa */
+.person, .form { position: relative; }
+.person::before, .form::before { content: ""; position: absolute; inset: 0; background: radial-gradient(380px circle at var(--mx, 50%) var(--my, -30%), rgba(229,122,65,.08), transparent 60%); opacity: 0; transition: opacity .4s ease; pointer-events: none; }
+.person:hover::before, .form:hover::before { opacity: 1; }
+.person > *, .form > * { position: relative; }
+
+@media (max-width: 880px) {
+  .services { gap: 12px; }
+  .rel { gap: 10px; }
+}
