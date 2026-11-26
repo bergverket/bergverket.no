@@ -1,0 +1,20 @@
+{
+ "path": "/artikler/hva-koster-en-nettbutikk/",
+ "kort": "Hva koster en nettbutikk?",
+ "title": "Hva koster en nettbutikk i Shopify? · Bergverket",
+ "desc": "Hva du faktisk betaler for når du lager nettbutikk i Shopify: abonnement, tema, apper, betalingsgebyrer, domene og arbeidet med å sette den opp.",
+ "h1": "Hva koster en nettbutikk i Shopify?",
+ "lead": "Prisen på en nettbutikk består av to deler: det du betaler løpende for å ha butikken, og det det koster å sette den opp. Her er hva som påvirker begge.",
+ "body": "<h2>Løpende kostnader</h2>\n<p>Dette betaler du selv, direkte til leverandørene, uansett hvem som lager butikken:</p>\n<ul class=\"ticks\">\n<li><strong>Shopify-abonnement.</strong> Et fast beløp per måned. Det finnes flere planer, og de fleste små butikker klarer seg med den minste. Se gjeldende priser på shopify.com.</li>\n<li><strong>Betalingsgebyrer.</strong> En liten prosent av hvert salg til kortbetaling, Vipps eller Klarna. Gebyret varierer med løsning og plan.</li>\n<li><strong>Apper.</strong> Mange butikker klarer seg med gratis apper. Noen funksjoner, som avanserte filtre, abonnement eller frakt-integrasjoner, koster en månedspris.</li>\n<li><strong>Domene og e-post.</strong> Et .no-domene og e-post på domenet koster noen hundrelapper i året hos en norsk leverandør.</li>\n<li><strong>Frakt.</strong> Avtale med for eksempel Posten/Bring eller PostNord. Prisen avhenger av volum og pakkestørrelse.</li>\n</ul>\n\n<h2>Kostnaden ved å sette den opp</h2>\n<p>Hva det koster å få butikken laget, kommer an på noen få ting:</p>\n<ol>\n<li><strong>Antall varer.</strong> 20 varer med ferdige bilder er raskt gjort. 500 varer fra et regneark tar lengre tid, med mindre importen kan automatiseres.</li>\n<li><strong>Design.</strong> Et ferdig tema tilpasset med logo og farger er rimeligere enn et helt eget design.</li>\n<li><strong>Innhold.</strong> Har du tekster og bilder klare, går det fortere enn om alt skal lages.</li>\n<li><strong>Integrasjoner.</strong> Kobling til kassesystem, regnskap eller lager gjør jobben større.</li>\n<li><strong>Flytting.</strong> Kommer du fra en annen plattform, må varer, kunder og gamle lenker flyttes riktig.</li>\n</ol>\n\n<h2>Slik kan du spare penger</h2>\n<ul class=\"ticks\">\n<li>Start med den minste Shopify-planen og et ferdig tema. Du kan bygge ut senere.</li>\n<li>Bruk så få betalte apper som mulig de første månedene.</li>\n<li>Samle bilder og varedata i et regneark før du starter.</li>\n<li>La AI-agenter skrive produkttekster og legge inn varer, i stedet for å betale timepris for det. <a href=\"/automatisering/\">Les om automatisering</a>.</li>\n</ul>\n\n<h2>Hva tar Bergverket?</h2>\n<p>Vi har ikke faste pakker på nettsiden, fordi butikker er forskjellige. Etter en uforpliktende første prat får du et tilbud med pris og plan, så du vet hva det koster før vi begynner. <a href=\"/nettbutikk-shopify/\">Les mer om hvordan vi lager nettbutikker</a>.</p>",
+ "faq": [
+  [
+   "Kan jeg lage nettbutikk i Shopify selv?",
+   "Ja, Shopify er laget for det. Mange får hjelp til oppsett, betaling, frakt og vilkår, og gjør den daglige driften selv."
+  ],
+  [
+   "Er det dyrere med Shopify enn WooCommerce?",
+   "Shopify har en fast månedspris, mens WooCommerce er gratis å installere men krever hosting, oppdateringer og mer teknisk vedlikehold. For mange små butikker blir totalen omtrent lik, og Shopify er enklere å drive."
+  ]
+ ],
+ "dato": "2026-11-26"
+}

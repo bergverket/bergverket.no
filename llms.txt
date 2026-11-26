@@ -29,8 +29,13 @@
 
 ## Mer
 - [Nettbyrå i Stavanger](https://bergverket.no/nettbyra-stavanger/)
-- [Hva koster en nettbutikk i Shopify?](https://bergverket.no/artikler/hva-koster-en-nettbutikk/)
 - [Artikler](https://bergverket.no/artikler/)
+
+## Artikler
+- [Hva koster en nettbutikk i Shopify?](https://bergverket.no/artikler/hva-koster-en-nettbutikk/)
+- [Slik blir bedriften din funnet på Google, gratis](https://bergverket.no/artikler/bli-funnet-pa-google/)
+- [Shopify eller WooCommerce for en liten nettbutikk?](https://bergverket.no/artikler/shopify-eller-woocommerce/)
+- [Sjekkliste før du åpner nettbutikken](https://bergverket.no/artikler/sjekkliste-for-nettbutikk-for-apning/)
 - [Om oss](https://bergverket.no/#oss)
 - [Spørsmål og svar](https://bergverket.no/#sporsmal)
 - [Personvern](https://bergverket.no/personvern.html)

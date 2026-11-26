@@ -1,0 +1,20 @@
+{
+ "path": "/artikler/sjekkliste-for-nettbutikk-for-apning/",
+ "kort": "Sjekkliste før nettbutikken åpner",
+ "dato": "2026-11-26",
+ "title": "Sjekkliste før du åpner nettbutikken · Bergverket",
+ "desc": "Alt du bør sjekke før nettbutikken åpner: betaling, frakt, salgsbetingelser, angrerett, personvern, testkjøp, e-poster, mobil og Google.",
+ "h1": "Sjekkliste før du åpner nettbutikken",
+ "lead": "Dette er listen vi går gjennom før en nettbutikk åpner. Den er laget ut fra arbeidet med nettbutikken til platesjappa On the Record i Trondheim.",
+ "body": "<h2>Betaling og frakt</h2>\n<ul class=\"ticks\">\n<li>Betalingsløsningene er aktivert og testet med et ekte kjøp, ikke bare i testmodus.</li>\n<li>Utbetalinger går til riktig bankkonto.</li>\n<li>Fraktvalg og fraktpriser stemmer, også for tunge eller store varer.</li>\n<li>Du vet hvordan du lager fraktetikett og sporingsnummer for en ordre.</li>\n</ul>\n\n<h2>Lover og vilkår</h2>\n<ul class=\"ticks\">\n<li>Salgsbetingelser er på plass, med pris, levering, betaling og reklamasjon.</li>\n<li>Angreretten er forklart. Ved kjøp på nett har forbrukere som hovedregel 14 dagers angrerett, og et angrerettskjema skal være tilgjengelig.</li>\n<li>Bedriftens navn, adresse, e-post og organisasjonsnummer står på siden.</li>\n<li>Personvernerklæringen sier hva du samler inn og hvorfor.</li>\n<li>Måling og annonsesporing lastes bare etter at den besøkende har sagt ja.</li>\n</ul>\n\n<h2>Innhold</h2>\n<ul class=\"ticks\">\n<li>Alle varer har bilde, pris, beskrivelse og riktig lagerantall.</li>\n<li>Kategoriene er logiske, og søk og filtre gir treff.</li>\n<li>Bildene har alternativ tekst, og de er komprimert så siden laster raskt.</li>\n<li>Om oss, kontakt og åpningstider er oppdatert.</li>\n</ul>\n\n<h2>Test som en kunde</h2>\n<ul class=\"ticks\">\n<li>Gjør et helt kjøp på mobilen, fra forsiden til bekreftelsen.</li>\n<li>Les e-postene kunden får: ordrebekreftelse, sending og eventuell refusjon. Er de på norsk og med riktig avsender?</li>\n<li>Prøv rabattkoder, gavekort og retur hvis du bruker det.</li>\n<li>Sjekk at kontaktskjemaet faktisk kommer fram.</li>\n</ul>\n\n<h2>Synlighet fra første dag</h2>\n<ul class=\"ticks\">\n<li>Passordet på butikken er tatt av.</li>\n<li>Butikken er lagt til i Google Search Console, og nettstedskartet er sendt inn.</li>\n<li>Google-bedriftsprofilen lenker til nettbutikken.</li>\n<li>Facebook og Instagram er koblet til, så du kan vise varer og måle salg.</li>\n<li>Domenet peker på butikken, både med og uten www.</li>\n</ul>\n<p>Les også <a href=\"/artikler/bli-funnet-pa-google/\">slik blir bedriften funnet på Google</a>. Vil du ha hjelp til å gjøre butikken klar, se <a href=\"/nettbutikk-shopify/\">nettbutikk i Shopify</a>.</p>",
+ "faq": [
+  [
+   "Hvor lang tid før åpning bør jeg teste?",
+   "Gjerne en uke før, så du rekker å rette det du finner. Ta et siste testkjøp dagen før åpning."
+  ],
+  [
+   "Må jeg ha organisasjonsnummer for å åpne nettbutikk?",
+   "Driver du næring, må bedriften være registrert, og organisasjonsnummeret skal stå på nettsiden. Sjekk reglene for din bedriftsform hos Brønnøysundregistrene."
+  ]
+ ]
+}
