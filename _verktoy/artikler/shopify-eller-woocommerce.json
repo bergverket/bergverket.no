@@ -1,0 +1,20 @@
+{
+ "path": "/artikler/shopify-eller-woocommerce/",
+ "kort": "Shopify eller WooCommerce?",
+ "dato": "2026-11-26",
+ "title": "Shopify eller WooCommerce for en liten norsk nettbutikk? · Bergverket",
+ "desc": "Shopify eller WooCommerce? En ærlig sammenligning for små norske bedrifter: pris, drift, sikkerhet, fleksibilitet og hvem som bør velge hva.",
+ "h1": "Shopify eller WooCommerce for en liten nettbutikk?",
+ "lead": "Shopify og WooCommerce er de to vanligste valgene for små nettbutikker. Begge fungerer godt. Forskjellen ligger i hvem som tar seg av driften.",
+ "body": "<h2>Kort fortalt</h2>\n<ul class=\"ticks\">\n<li><strong>Shopify</strong> er en ferdig tjeneste. Du betaler en fast pris i måneden, og Shopify tar seg av servere, sikkerhet og oppdateringer.</li>\n<li><strong>WooCommerce</strong> er et gratis tillegg til WordPress. Du trenger egen hosting og må selv holde WordPress, temaet og tilleggene oppdatert.</li>\n</ul>\n\n<h2>Drift og sikkerhet</h2>\n<p>Med Shopify slipper du å tenke på oppdateringer og sikkerhetshull. Med WooCommerce er det ditt ansvar, eller ansvaret til den som drifter siden. En WordPress-side som ikke oppdateres, blir fort et sikkerhetsproblem. Har du ingen som passer på den, peker det mot Shopify.</p>\n\n<h2>Pris</h2>\n<p>Shopify har en fast månedspris og gebyr per salg, pluss eventuelle apper. WooCommerce er gratis å installere, men du betaler for hosting, ofte for betalte tillegg og for tiden det tar å vedlikeholde. For mange små butikker blir totalen omtrent den samme. Se <a href=\"/artikler/hva-koster-en-nettbutikk/\">hva en nettbutikk koster</a> for hva som påvirker prisen.</p>\n\n<h2>Fleksibilitet</h2>\n<p>WooCommerce gir mer frihet, fordi du har tilgang til all koden og kan installere nesten hva som helst. Shopify er mer låst, men har en stor appbutikk som dekker det de fleste butikker trenger. Har du helt spesielle behov, kan WooCommerce være bedre.</p>\n\n<h2>Norske løsninger</h2>\n<p>Begge kan kobles til vanlige norske betalings- og fraktløsninger. Sjekk at løsningene du vil bruke, har en app eller et tillegg for plattformen du velger, før du bestemmer deg.</p>\n\n<h2>Hva vi anbefaler</h2>\n<p>For de fleste små bedrifter uten egen IT-person anbefaler vi Shopify, fordi det er enklere å drive selv og tryggere over tid. Har du allerede en godt vedlikeholdt WordPress-side og noen som passer på den, kan WooCommerce være et godt valg. Vi lager selv <a href=\"/nettbutikk-shopify/\">nettbutikker i Shopify</a>.</p>",
+ "faq": [
+  [
+   "Kan jeg flytte fra WooCommerce til Shopify?",
+   "Ja. Varer, kunder og ordrehistorikk kan flyttes. Husk å sette opp videresending fra gamle adresser, så du ikke mister plasseringen i Google."
+  ],
+  [
+   "Hvilken er best for Google?",
+   "Begge kan rangere godt. Det som avgjør, er innholdet, hastigheten og lenkene, ikke plattformen."
+  ]
+ ]
+}
