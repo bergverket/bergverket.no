@@ -167,6 +167,45 @@ for f in glob.glob(os.path.join(HER, "artikler", "*.json")):
     a["article"] = True
     a["eyebrow"] = "Artikkel"
     ART_SIDER.append(a)
+# Case-sider (bare med kundens ja). Trond sa ja til On the Record-caset 2026-11-25.
+CASES = [
+ {
+  "path": "/arbeid/on-the-record/",
+  "kort": "On the Record",
+  "title": "Case: nettbutikk for platesjappa On the Record · Bergverket",
+  "desc": "Slik bygde vi nettbutikken i Shopify for platesjappa On the Record i Trondheim: eget tema, over 200 brukte plater lagt inn fra bilder, kasse og butikk i samme system.",
+  "eyebrow": "Case · Nettbutikk i Shopify",
+  "h1": "On the Record",
+  "lead": "Platesjappa On the Record i Trondheim ville selge brukte plater på nett, ved siden av butikken. Vi bygde nettbutikken i Shopify fra bunnen, og den åpner 2. desember 2026.",
+  "body": """
+<div class="case-facts">
+  <div><b>200+</b><span>plater lagt inn</span></div>
+  <div><b>2.12</b><span>åpningsdag 2026</span></div>
+  <div><b>1</b><span>lager for butikk og nett</span></div>
+</div>
+<h2>Utgangspunktet</h2>
+<p>On the Record selger brukte CD-er og LP-er i Trondheim. Hver plate er ofte den eneste i sitt slag, så alt må legges inn én og én, med riktig artist, tittel, format og stand. Det tar lang tid å gjøre for hånd, og det er derfor mange sjapper aldri kommer seg på nett.</p>
+<h2>Det vi gjorde</h2>
+<ul class="ticks">
+<li>Satte opp Shopify med et eget tema i sjappas stil</li>
+<li>La inn lageret i bunker fra bilder og regneark. Agenter skrev produkttekstene, og vi så over før de ble publisert</li>
+<li>Koblet kassen i butikken til Shopify, så salg i sjappa og på nett havner i samme system</li>
+<li>Satte opp kortbetaling, frakt, salgsbetingelser og e-poster på norsk</li>
+<li>Koblet måling av salg og besøk, så Trond ser hva som selger</li>
+</ul>
+<h2>Slik gikk vareimporten</h2>
+<ol>
+<li><strong>Bunker.</strong> Platene kom inn i bunker, med bilder og opplysninger fra sjappa.</li>
+<li><strong>Agenter.</strong> Agenter laget produkttekst, kategori og søkeord for hver plate.</li>
+<li><strong>Kontroll.</strong> Vi gikk gjennom alt før platene ble satt som aktive i butikken.</li>
+</ol>
+<p>Over 200 plater kom inn på denne måten før åpning. Det samme oppsettet bruker vi når nye bunker kommer.</p>
+<h2>Hva betyr det for deg?</h2>
+<p>Har du mange varer, eller varer som ikke finnes i en ferdig produktliste, er det her vi sparer deg mest tid. Les mer om <a href="/nettbutikk-shopify/">nettbutikk i Shopify</a> og <a href="/automatisering/">automatisering med AI-agenter</a>.</p>
+""",
+ },
+]
+SIDER = SIDER + CASES
 ART_SIDER.sort(key=lambda a: a["dato"], reverse=True)
 ARTIKLER = [(a["path"], a["kort"]) for a in ART_SIDER]
 SIDER = SIDER + ART_SIDER
@@ -175,8 +214,15 @@ def esc(s): return html.escape(s, quote=True)
 
 def related(current):
     items = [(p, t) for p, t in TJENESTER + ARTIKLER[:4] + [("/artikler/", "Alle artikler")] if p != current]
-    lis = "\n".join(f'<li><a href="{p}">{esc(t)}</a></li>' for p, t in items)
-    return f'<nav class="related" aria-label="Mer fra Bergverket"><h2>Mer fra Bergverket</h2><ul class="ticks">\n{lis}\n</ul></nav>'
+    cards = "\n".join(f'<li><a href="{p}"><span class="rel__k">{"Artikkel" if p.startswith("/artikler/") and p != "/artikler/" else "Les mer"}</span>{esc(t)}</a></li>' for p, t in items[:6])
+    return f'''<nav class="related light-2" aria-label="Mer fra Bergverket">
+  <div class="wrap">
+    <h2>Mer fra Bergverket</h2>
+    <ul class="rel">
+{cards}
+    </ul>
+  </div>
+</nav>'''
 
 def footer():
     tj = "\n".join(f'          <li><a href="{p}">{esc(t)}</a></li>' for p, t in TJENESTER + [("/artikler/", "Artikler")])
@@ -214,12 +260,49 @@ def footer():
   </div>
 </footer>'''
 
+def header():
+    return f'''<header class="top">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="Bergverket, til forsiden">
+      {LOGO}
+      Bergverket
+    </a>
+    <a class="btn btn--ore top-cta" href="/#kontakt">Kontakt</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meny"><span aria-hidden="true"></span>Meny</button>
+    <nav class="nav" id="meny" aria-label="Hovedmeny">
+      <a href="/#tjenester">Tjenester</a>
+      <a href="/arbeid/on-the-record/">Arbeid</a>
+      <a href="/artikler/">Artikler</a>
+      <a href="/#oss">Om oss</a>
+      <a class="btn btn--ore" href="/#kontakt">Start et prosjekt</a>
+    </nav>
+  </div>
+</header>'''
+
+def hero_link(s):
+    if s.get("article"):
+        return '<a class="btn btn--ghost" href="/artikler/">Flere artikler</a>'
+    if s["path"].startswith("/arbeid/"):
+        return '<a class="btn btn--ghost" href="/#tjenester">Se hva vi lager</a>'
+    return '<a class="btn btn--ghost" href="/arbeid/on-the-record/">Se et eksempel</a>'
+
+def cta_link(s):
+    if s["path"].startswith("/arbeid/"):
+        return '<a class="btn btn--ghost" href="/#tjenester">Se hva vi lager</a>'
+    return '<a class="btn btn--ghost" href="/arbeid/on-the-record/">Se On the Record-caset</a>'
+
+def aside_links(current):
+    cur = ' aria-current="page"'
+    return "\n".join(f'          <li><a href="{p}"{cur if p == current else ""}>{esc(t)}</a></li>' for p, t in TJENESTER)
+
 def page(s):
     dato = s.get("dato", DATO)
     url = BASE + s["path"]
     crumbs = [("Bergverket", BASE + "/"), (s["kort"], url)]
     if s.get("article"):
         crumbs = [("Bergverket", BASE + "/"), ("Artikler", BASE + "/artikler/"), (s["kort"], url)]
+    elif s["path"].startswith("/arbeid/"):
+        crumbs = [("Bergverket", BASE + "/"), ("Arbeid", BASE + "/#arbeid"), (s["kort"], url)]
     graph = [
         {"@type": "WebPage" if not s.get("article") else "Article", "@id": url + "#side", "url": url,
          ("name" if not s.get("article") else "headline"): s["h1"], "description": s["desc"], "inLanguage": "nb-NO",
@@ -276,32 +359,56 @@ def page(s):
 </head>
 <body>
 <a class="skip" href="#innhold">Hopp til innholdet</a>
-<header class="top">
-  <div class="wrap">
-    <a class="mark" href="/" aria-label="Bergverket, til forsiden">
-      {LOGO}
-      Bergverket
-    </a>
-    <a class="btn btn--ore" href="/#kontakt" style="padding:9px 16px;font-size:15px">Start et prosjekt</a>
-  </div>
-</header>
-<main class="page light" id="innhold">
+{header()}
+<main id="innhold">
+<section class="sub-hero dark">
   <div class="wrap">
     <nav class="crumbs" aria-label="Brødsmuler">{crumb_html}</nav>
     <div class="depth">{esc(s["eyebrow"])}</div>
     <h1>{esc(s["h1"])}</h1>
     <p class="lead">{esc(s["lead"])}</p>{(chr(10) + '    <p class="updated">Publisert ' + dato + "</p>") if s.get("article") else ""}
+    <div class="ctas">
+      <a class="btn btn--ore" href="/#kontakt">Start et prosjekt <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a>
+      {hero_link(s)}
+    </div>
+  </div>
+</section>
+<div class="sub light">
+  <div class="wrap sub__grid">
+    <article class="prose">
 {s["body"].strip()}
 {faq_html}
-    <div class="cta-box">
-      <h2>Vil du ha en prat?</h2>
-      <p>Fortell kort om bedriften din og hva du vil få til. Første prat er uforpliktende.</p>
-      <p><a class="btn btn--ore" href="/#kontakt">Start et prosjekt</a> <a class="btn btn--ghost" href="mailto:hei@bergverket.no">hei@bergverket.no</a></p>
-    </div>
-{related(s["path"])}
+    </article>
+    <aside class="sub__aside" aria-label="Kontakt">
+      <div class="aside-card">
+        <div class="depth">Snakk med oss</div>
+        <p>Fortell kort hva du vil få til, så svarer Fabian eller Viktor. Første prat er uforpliktende.</p>
+        <a class="btn btn--ore" href="/#kontakt">Start et prosjekt</a>
+        <a class="aside-mail" href="mailto:hei@bergverket.no">hei@bergverket.no</a>
+      </div>
+      <div class="aside-card aside-card--plain">
+        <div class="depth">Tjenester</div>
+        <ul>
+{aside_links(s["path"])}
+        </ul>
+      </div>
+    </aside>
   </div>
+</div>
+<section class="sub-cta dark">
+  <div class="wrap">
+    <h2>Har du noe vi skal <em>grave i?</em></h2>
+    <p>To folk, én kontakt, og du eier alt når vi er ferdige.</p>
+    <div class="ctas">
+      <a class="btn btn--ore" href="/#kontakt">Start et prosjekt</a>
+      {cta_link(s)}
+    </div>
+  </div>
+</section>
 </main>
+{related(s["path"])}
 {footer()}
+<script src="/assets/site.js" defer></script>
 <script src="/assets/samtykke.js" defer></script>
 </body>
 </html>
@@ -322,7 +429,24 @@ for s in SIDER:
 os.makedirs(os.path.join(ROOT, "artikler"), exist_ok=True)
 open(os.path.join(ROOT, "artikler", "index.html"), "w", encoding="utf-8").write(artikler_index())
 
-urls = [("/", DATO), ("/personvern.html", DATO)] + [(p, DATO) for p, _ in TJENESTER] + [("/artikler/", max([DATO] + [a["dato"] for a in ART_SIDER]))] + [(a["path"], a["dato"]) for a in ART_SIDER]
+# Siste artikler på forsiden (mellom ARTIKLER-START og ARTIKLER-SLUTT i index.html)
+def forside_artikler():
+    kort = "\n".join(f'          <li><a href="{a["path"]}"><span class="rel__k">Artikkel</span>{esc(a["h1"])}</a></li>' for a in ART_SIDER[:3])
+    return f'''      <div class="home-art reveal">
+        <div class="home-art__head"><h3>Les mer i artiklene</h3><a href="/artikler/">Alle artikler →</a></div>
+        <ul class="rel">
+{kort}
+        </ul>
+      </div>
+'''
+idx = os.path.join(ROOT, "index.html")
+forside = open(idx, encoding="utf-8").read()
+a, b = "<!-- ARTIKLER-START (lages av _verktoy/lag_sider.py) -->\n", "      <!-- ARTIKLER-SLUTT -->"
+if a in forside and b in forside:
+    forside = forside[:forside.index(a) + len(a)] + forside_artikler() + forside[forside.index(b):]
+    open(idx, "w", encoding="utf-8").write(forside)
+
+urls = [("/", DATO), ("/personvern.html", DATO)] + [(p, DATO) for p, _ in TJENESTER] + [(c["path"], DATO) for c in CASES] + [("/artikler/", max([DATO] + [a["dato"] for a in ART_SIDER]))] + [(a["path"], a["dato"]) for a in ART_SIDER]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
     f"  <url><loc>{BASE}{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n"
 open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sm)

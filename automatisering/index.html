@@ -122,15 +122,33 @@
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M1.5 28.5 12 8.5l5.2 9.6 4-6.1 9.3 16.5Z" fill="currentColor"/><path d="M11.2 15h1.6v8.6h-1.6Z" fill="#101315"/><path d="m12 21.3 3 3-3 3-3-3Z" fill="#e57a41"/></svg>
       Bergverket
     </a>
-    <a class="btn btn--ore" href="/#kontakt" style="padding:9px 16px;font-size:15px">Start et prosjekt</a>
+    <a class="btn btn--ore top-cta" href="/#kontakt">Kontakt</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meny"><span aria-hidden="true"></span>Meny</button>
+    <nav class="nav" id="meny" aria-label="Hovedmeny">
+      <a href="/#tjenester">Tjenester</a>
+      <a href="/arbeid/on-the-record/">Arbeid</a>
+      <a href="/artikler/">Artikler</a>
+      <a href="/#oss">Om oss</a>
+      <a class="btn btn--ore" href="/#kontakt">Start et prosjekt</a>
+    </nav>
   </div>
 </header>
-<main class="page light" id="innhold">
+<main id="innhold">
+<section class="sub-hero dark">
   <div class="wrap">
     <nav class="crumbs" aria-label="Brødsmuler"><a href="/">Bergverket</a> <span aria-hidden="true">/</span> <span aria-current="page">Automatisering</span></nav>
     <div class="depth">Tjeneste</div>
     <h1>Agenter som tar de faste oppgavene</h1>
     <p class="lead">Hver kunde får egne AI-agenter som kjenner butikken og gjør det som ellers blir liggende: tekster, varer, sjekker og rapporter. Vi følger med og tar avgjørelsene.</p>
+    <div class="ctas">
+      <a class="btn btn--ore" href="/#kontakt">Start et prosjekt <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a>
+      <a class="btn btn--ghost" href="/arbeid/on-the-record/">Se et eksempel</a>
+    </div>
+  </div>
+</section>
+<div class="sub light">
+  <div class="wrap sub__grid">
+    <article class="prose">
 <h2>Hva agentene kan gjøre</h2>
 <ul class="ticks">
 <li>Skrive produkttekster og SEO-titler fra bilder og stikkord</li>
@@ -153,23 +171,50 @@
 <details><summary>Fungerer det med butikken jeg har i dag?</summary><div class="a"><p>Agentene er laget for Shopify. Har du en annen plattform, ser vi på hva som er mulig i første prat.</p></div></details>
 <details><summary>Blir tekstene like for alle?</summary><div class="a"><p>Nei. Agentene får en beskrivelse av tonen din og varene dine, og vi går over tekstene før de publiseres.</p></div></details>
 </div>
-    <div class="cta-box">
-      <h2>Vil du ha en prat?</h2>
-      <p>Fortell kort om bedriften din og hva du vil få til. Første prat er uforpliktende.</p>
-      <p><a class="btn btn--ore" href="/#kontakt">Start et prosjekt</a> <a class="btn btn--ghost" href="mailto:hei@bergverket.no">hei@bergverket.no</a></p>
-    </div>
-<nav class="related" aria-label="Mer fra Bergverket"><h2>Mer fra Bergverket</h2><ul class="ticks">
-<li><a href="/nettbutikk-shopify/">Nettbutikk i Shopify</a></li>
-<li><a href="/nettside/">Nettside for bedrifter</a></li>
-<li><a href="/nettbyra-stavanger/">Nettbyrå i Stavanger</a></li>
-<li><a href="/artikler/hva-koster-en-nettbutikk/">Hva koster en nettbutikk?</a></li>
-<li><a href="/artikler/bli-funnet-pa-google/">Slik blir bedriften funnet på Google</a></li>
-<li><a href="/artikler/sjekkliste-for-nettbutikk-for-apning/">Sjekkliste før nettbutikken åpner</a></li>
-<li><a href="/artikler/shopify-eller-woocommerce/">Shopify eller WooCommerce?</a></li>
-<li><a href="/artikler/">Alle artikler</a></li>
-</ul></nav>
+    </article>
+    <aside class="sub__aside" aria-label="Kontakt">
+      <div class="aside-card">
+        <div class="depth">Snakk med oss</div>
+        <p>Fortell kort hva du vil få til, så svarer Fabian eller Viktor. Første prat er uforpliktende.</p>
+        <a class="btn btn--ore" href="/#kontakt">Start et prosjekt</a>
+        <a class="aside-mail" href="mailto:hei@bergverket.no">hei@bergverket.no</a>
+      </div>
+      <div class="aside-card aside-card--plain">
+        <div class="depth">Tjenester</div>
+        <ul>
+          <li><a href="/nettbutikk-shopify/">Nettbutikk i Shopify</a></li>
+          <li><a href="/nettside/">Nettside for bedrifter</a></li>
+          <li><a href="/automatisering/" aria-current="page">Automatisering med AI-agenter</a></li>
+          <li><a href="/nettbyra-stavanger/">Nettbyrå i Stavanger</a></li>
+        </ul>
+      </div>
+    </aside>
   </div>
+</div>
+<section class="sub-cta dark">
+  <div class="wrap">
+    <h2>Har du noe vi skal <em>grave i?</em></h2>
+    <p>To folk, én kontakt, og du eier alt når vi er ferdige.</p>
+    <div class="ctas">
+      <a class="btn btn--ore" href="/#kontakt">Start et prosjekt</a>
+      <a class="btn btn--ghost" href="/arbeid/on-the-record/">Se On the Record-caset</a>
+    </div>
+  </div>
+</section>
 </main>
+<nav class="related light-2" aria-label="Mer fra Bergverket">
+  <div class="wrap">
+    <h2>Mer fra Bergverket</h2>
+    <ul class="rel">
+<li><a href="/nettbutikk-shopify/"><span class="rel__k">Les mer</span>Nettbutikk i Shopify</a></li>
+<li><a href="/nettside/"><span class="rel__k">Les mer</span>Nettside for bedrifter</a></li>
+<li><a href="/nettbyra-stavanger/"><span class="rel__k">Les mer</span>Nettbyrå i Stavanger</a></li>
+<li><a href="/artikler/hva-koster-en-nettbutikk/"><span class="rel__k">Artikkel</span>Hva koster en nettbutikk?</a></li>
+<li><a href="/artikler/bli-funnet-pa-google/"><span class="rel__k">Artikkel</span>Slik blir bedriften funnet på Google</a></li>
+<li><a href="/artikler/sjekkliste-for-nettbutikk-for-apning/"><span class="rel__k">Artikkel</span>Sjekkliste før nettbutikken åpner</a></li>
+    </ul>
+  </div>
+</nav>
 <footer class="foot">
   <div class="wrap">
     <div class="grid">
@@ -207,6 +252,7 @@
     </div>
   </div>
 </footer>
+<script src="/assets/site.js" defer></script>
 <script src="/assets/samtykke.js" defer></script>
 </body>
 </html>

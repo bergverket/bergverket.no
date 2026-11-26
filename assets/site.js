@@ -64,6 +64,27 @@
     rev.forEach(function (el) { io.observe(el); });
   } else rev.forEach(function (el) { el.classList.add('in'); });
 
+  // Tall i casen teller opp når de kommer til syne
+  var nums = [].slice.call(doc.querySelectorAll('.fact b, .case-facts b')).filter(function (b) { return /^\d+\+?$/.test(b.textContent.trim()); });
+  if (nums.length && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var cio = new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        cio.unobserve(e.target);
+        var el = e.target, txt = el.textContent.trim(), end = parseInt(txt, 10), plus = /\+$/.test(txt), t0 = null;
+        if (end < 10) return;
+        function step(t) {
+          if (!t0) t0 = t;
+          var k = Math.min(1, (t - t0) / 1100), v = Math.round(end * (1 - Math.pow(1 - k, 3)));
+          el.textContent = v + (plus ? '+' : '');
+          if (k < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }, { threshold: .6 });
+    nums.forEach(function (b) { cio.observe(b); });
+  }
+
   // Kopier e-post
   var copyBtn = doc.getElementById('copyBtn'), msg = doc.getElementById('copyMsg'), mail = doc.getElementById('mail');
   if (copyBtn) copyBtn.addEventListener('click', function () {
