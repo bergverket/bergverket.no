@@ -7,7 +7,7 @@
 //   await __bvPost({kicker:'TIPS', title:[['SLIK BLIR',0],['DU FUNNET',0],['PÅ GOOGLE',1]], body:'Tre gratis grep ...', foot:'BERGVERKET.NO'})
 //   title = liste av [tekst, 1 hvis kobberfarget]. Maks ca. 9 tegn per linje i stor skrift.
 // Variabler forsvinner når Instagram laster siden på nytt (f.eks. etter «Done»): lim inn igjen.
-window.__bvPost = async function ({ kicker = '', title = [], body = '', foot = 'BERGVERKET.NO', size = 200 } = {}) {
+window.__bvPost = async function ({ kicker = '', title = [], body = '', foot = 'BERGVERKET.NO', size = 200, preview = false } = {}) {
   const W = 1080, H = 1350, cv = document.createElement('canvas'); cv.width = W; cv.height = H;
   const x = cv.getContext('2d');
   const BG = '#101315', INK = '#eceae5', ORE = '#e57a41';
@@ -26,7 +26,7 @@ window.__bvPost = async function ({ kicker = '', title = [], body = '', foot = '
   let y = 280; if (kicker) { t(kicker.toUpperCase(), 110, y, '500 34px ' + M, ORE, '5px'); y += 40; }
   x.font = 'bold ' + size + 'px ' + D; const widest = Math.max(1, ...title.map(([s]) => x.measureText(s.toUpperCase()).width));
   if (widest > 860) size = Math.floor(size * 860 / widest); // krymp til linjene passer
-  const lh = size * 0.86;
+  const lh = size * 0.97; // luft nok til Æ, Ø og Å
   for (const [s, o] of title) { y += lh; t(s.toUpperCase(), 106, y, 'bold ' + size + 'px ' + D, o ? ORE : INK); }
   if (body) { // ombryt brødtekst
     x.font = '400 42px ' + S; y += 80; let line = '';
@@ -34,6 +34,11 @@ window.__bvPost = async function ({ kicker = '', title = [], body = '', foot = '
     if (line) t(line, 110, y, '400 42px ' + S, '#b9bab5');
   }
   t(foot, 110, Math.max(y + 90, 820), '500 34px ' + M, INK, '5px'); // tekst bør slutte før ca. y=900 (fjellene)
+  if (preview) { // vis i fanen i stedet for å laste opp: await __bvPost({..., preview:true}); fjern med document.getElementById('bvprev').remove()
+    let o = document.getElementById('bvprev'); if (!o) { o = document.createElement('div'); o.id = 'bvprev'; document.body.appendChild(o); }
+    o.style.cssText = 'position:fixed;inset:0;z-index:2147483647;background:#000;display:flex;gap:8px;align-items:center;justify-content:center';
+    cv.style.cssText = 'height:80vh;width:auto'; o.appendChild(cv); return 'preview';
+  }
   const blob = await new Promise(r => cv.toBlob(r, 'image/jpeg', 0.95));
   const file = new File([blob], 'bergverket-post.jpg', { type: 'image/jpeg' });
   const inp = [...document.querySelectorAll('input[type=file]')].filter(i => /video/.test(i.accept)).pop();
