@@ -59,8 +59,6 @@ a { color: inherit; text-underline-offset: 3px; }
 .skip:focus { top: 12px; }
 .sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-/* Plassholdere: tekst vi venter på fra Fabian og Viktor. Lett å se i forhåndsvisning. */
-.ph { background: repeating-linear-gradient(135deg, rgba(229,122,65,.16) 0 6px, rgba(229,122,65,.28) 6px 12px); outline: 1px dashed var(--ore); outline-offset: 1px; padding: 0 .2em; }
 
 /* ---------- Toppen ---------- */
 .top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--rock) 92%, transparent); color: var(--rock-ink); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rock-line); padding-top: env(safe-area-inset-top, 0px); }
@@ -165,8 +163,8 @@ p { text-wrap: pretty; }
   .hero .lead, .hero .ctas, .hero .note { animation: rise .8s .12s cubic-bezier(.2,.7,.2,1) both; }
   .section-cut { animation: rise .9s .22s cubic-bezier(.2,.7,.2,1) both; }
   @keyframes rise { from { transform: translateY(16px); opacity: .001; } to { transform: none; opacity: 1; } }
-  .reveal { opacity: .001; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
-  .reveal.in { opacity: 1; transform: none; }
+  .js .reveal { opacity: .001; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.in { opacity: 1; transform: none; }
 }
 
 /* Borekjerne: det som er med */
@@ -238,18 +236,6 @@ p { text-wrap: pretty; }
 .fact b { display: block; font-family: var(--display); font-weight: 900; font-size: 40px; line-height: 1; font-variant-numeric: tabular-nums; color: var(--ore-hot); }
 .fact span { font-size: 13.5px; color: var(--rock-muted); }
 
-/* ---------- Priser ---------- */
-.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
-.plan { border: 1px solid var(--line); background: var(--card); padding: 28px; display: flex; flex-direction: column; gap: 14px; position: relative; }
-.plan--main { border: 2px solid var(--ink); }
-.plan--main .ribbon { position: absolute; top: -13px; left: 26px; background: var(--ink); color: var(--bg); font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; }
-.plan h3 { font-size: 32px; }
-.plan .for { margin: 0; color: var(--muted); font-size: 15.5px; }
-.price { font-family: var(--display); font-weight: 900; font-size: 44px; line-height: 1; text-transform: uppercase; }
-.price small { font-family: var(--body); font-weight: 500; font-size: 14px; text-transform: none; color: var(--muted); margin-left: 4px; }
-.plan .ticks { flex: 1; }
-.plan .btn { align-self: stretch; }
-.plan .btn--ghost:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .fine { font-size: 14px; color: var(--muted); margin: 24px 0 0; max-width: 72ch; }
 
 /* ---------- Folka ---------- */
@@ -262,7 +248,7 @@ p { text-wrap: pretty; }
 .person .role { font-family: var(--mono); font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ore-hot); margin: 6px 0 12px; }
 .person p { margin: 0; color: var(--rock-muted); font-size: 15.5px; }
 .person a { color: var(--rock-ink); }
-.motto { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(40px, 7vw, 96px); line-height: .9; margin: clamp(40px, 6vw, 72px) 0 0; color: var(--rock-3); -webkit-text-stroke: 1px var(--rock-line); }
+.motto { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(40px, 7vw, 96px); line-height: .9; margin: clamp(40px, 6vw, 72px) 0 0; color: #646d74; -webkit-text-stroke: 0; }
 .motto em { font-style: normal; color: var(--ore-hot); -webkit-text-stroke: 0; }
 
 /* ---------- Spørsmål ---------- */
@@ -306,6 +292,13 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .chip input:focus-visible + span { outline: 2px solid var(--ore-hot); outline-offset: 2px; }
 .form .btn { justify-self: start; }
 .form .fine { color: var(--rock-muted); margin: 0; font-size: 13.5px; }
+.sent { border-top: 1px solid var(--rock-line); padding-top: 18px; display: grid; gap: 12px; }
+.sent:focus { outline: none; }
+.sent p { margin: 0; font-size: 15px; color: var(--rock-muted); }
+.sent b { color: var(--rock-ink); }
+.sent__btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.sent .btn { padding: 10px 16px; font-size: 15px; }
+.top-cta { display: none; }
 .err { color: #ff9b8d; font-size: 13.5px; min-height: 0; margin: 0; }
 
 /* ---------- Bunnen ---------- */
@@ -313,7 +306,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .foot .grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
 .foot .mark { color: var(--rock-ink); font-size: 30px; }
 .foot p { margin: 12px 0 0; max-width: 36ch; }
-.foot h4 { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--rock-ink); margin: 6px 0 12px; }
+.foot h4, .foot .foot-h { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--rock-ink); margin: 6px 0 12px; }
 .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .foot a { text-decoration: none; }
 .foot a:hover { color: var(--rock-ink); text-decoration: underline; }
@@ -331,11 +324,13 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 @media (max-width: 1020px) {
   .step { grid-template-columns: 130px minmax(0, 1fr); }
   .step .out { grid-column: 2; margin-top: 0; }
-  .plans { grid-template-columns: 1fr; max-width: 560px; }
   .duo { grid-template-columns: 1fr; }
 }
 @media (max-width: 880px) {
   .menu-btn { display: inline-flex; }
+  .top .wrap { gap: 10px; }
+  .top .mark { margin-right: auto; }
+  .top-cta { display: inline-flex; padding: 9px 14px; font-size: 15px; white-space: nowrap; color: var(--rock); box-shadow: none; }
   .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--rock); border-bottom: 1px solid var(--rock-line); flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--gutter) 20px; }
   .nav.open { display: flex; }
   .nav a { padding: 14px 0; border-bottom: 1px solid var(--rock-line); font-size: 17px; }
@@ -368,7 +363,21 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
   .log li { grid-template-columns: 1fr; gap: 2px; }
   .hero .ctas .btn { flex: 1 1 100%; }
 }
+@media (max-width: 360px) {
+  .top .mark { font-size: 21px; gap: 8px; }
+  .menu-btn { padding: 10px; font-size: 0; gap: 0; }
+}
+/* ---------- Samtykke (informasjonskapsler) ---------- */
+.consent { position: fixed; z-index: 40; left: 16px; right: 16px; bottom: max(16px, env(safe-area-inset-bottom, 0px)); max-width: 560px; margin-left: auto; background: var(--rock-2); color: var(--rock-ink); border: 1px solid var(--rock-line); box-shadow: 0 12px 40px rgba(0,0,0,.35); padding: 18px 20px; display: grid; gap: 14px; font-size: 15px; line-height: 1.5; }
+.consent p { margin: 0; color: var(--rock-muted); }
+.consent b { color: var(--rock-ink); }
+.consent a { color: var(--rock-ink); }
+.consent__btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.consent .btn { padding: 11px 16px; font-size: 15px; }
+.consent .btn:hover { background: var(--rock-ink); color: var(--rock); border-color: var(--rock-ink); }
+.linkbtn { background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; text-decoration: none; }
+.linkbtn:hover { text-decoration: underline; }
 @media print {
-  .top, .gauge, .form, .menu-btn { display: none !important; }
+  .top, .gauge, .form, .menu-btn, .consent { display: none !important; }
   .dark, .foot { background: #fff !important; color: #000 !important; }
 }
