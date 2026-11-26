@@ -56,7 +56,7 @@
   if (layers.length) { window.addEventListener('scroll', onScroll, { passive: true }); window.addEventListener('resize', onScroll); update(); }
 
   // Glid inn når seksjoner kommer til syne
-  var rev = doc.querySelectorAll('.reveal');
+  var rev = doc.querySelectorAll('.reveal, .stagger');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (ents) {
       ents.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
@@ -83,6 +83,24 @@
       });
     }, { threshold: .6 });
     nums.forEach(function (b) { cio.observe(b); });
+  }
+
+  // Myk parallakse på utstillingen (bruker «translate», så den ikke krasjer med inngangsanimasjonen)
+  var par = doc.querySelectorAll('[data-par]');
+  if (par.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var pt = false;
+    function parUpdate() {
+      pt = false;
+      var vh = window.innerHeight;
+      par.forEach(function (el) {
+        var r = el.parentNode.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) return;
+        var d = (r.top + r.height / 2 - vh / 2) * parseFloat(el.getAttribute('data-par'));
+        el.style.translate = '0 ' + d.toFixed(1) + 'px';
+      });
+    }
+    window.addEventListener('scroll', function () { if (!pt) { pt = true; requestAnimationFrame(parUpdate); } }, { passive: true });
+    parUpdate();
   }
 
   // Kopier e-post

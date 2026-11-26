@@ -175,6 +175,14 @@ CASES = [
   "title": "Case: nettbutikk for platesjappa On the Record · Bergverket",
   "desc": "Slik bygde vi nettbutikken i Shopify for platesjappa On the Record i Trondheim: eget tema, over 200 brukte plater lagt inn fra bilder, kasse og butikk i samme system.",
   "eyebrow": "Case · Nettbutikk i Shopify",
+  "hero_media": """
+<div class="case-hero">
+      <div class="sc__glow" aria-hidden="true"></div>
+      <figure class="browser">
+        <div class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>On the Record · nettbutikk</span></div>
+        <picture><source srcset="/assets/arbeid/otr-forside-800.webp 800w, /assets/arbeid/otr-forside.webp 1493w" sizes="(max-width: 1200px) 92vw, 1120px" type="image/webp"><img src="/assets/arbeid/otr-forside.jpg" alt="Forsiden til nettbutikken On the Record: mørk bakgrunn, gul tekst «Plater, ikke algoritmer» og en stabel med plater" width="1493" height="812" fetchpriority="high" decoding="async"></picture>
+      </figure>
+    </div>""",
   "h1": "On the Record",
   "lead": "Platesjappa On the Record i Trondheim ville selge brukte plater på nett, ved siden av butikken. Vi bygde nettbutikken i Shopify fra bunnen, og den åpner 2. desember 2026.",
   "body": """
@@ -193,6 +201,13 @@ CASES = [
 <li>Satte opp kortbetaling, frakt, salgsbetingelser og e-poster på norsk</li>
 <li>Koblet måling av salg og besøk, så Trond ser hva som selger</li>
 </ul>
+<figure class="case-fig">
+  <div class="browser">
+    <div class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>Nytt på vinyl</span></div>
+    <picture><source srcset="/assets/arbeid/otr-nytt.webp" type="image/webp"><img src="/assets/arbeid/otr-nytt.jpg" alt="Seksjonen «Nytt på vinyl» med fire brukte LP-er, pris og knapp for å legge i kurven" width="1084" height="600" loading="lazy" decoding="async"></picture>
+  </div>
+  <figcaption>Hver plate er ofte den eneste i sitt slag. Pris, format og «unikt eksemplar» vises rett på kortet.</figcaption>
+</figure>
 <h2>Slik gikk vareimporten</h2>
 <ol>
 <li><strong>Bunker.</strong> Platene kom inn i bunker, med bilder og opplysninger fra sjappa.</li>
@@ -218,7 +233,7 @@ def related(current):
     return f'''<nav class="related light-2" aria-label="Mer fra Bergverket">
   <div class="wrap">
     <h2>Mer fra Bergverket</h2>
-    <ul class="rel">
+    <ul class="rel stagger">
 {cards}
     </ul>
   </div>
@@ -361,7 +376,7 @@ def page(s):
 <a class="skip" href="#innhold">Hopp til innholdet</a>
 {header()}
 <main id="innhold">
-<section class="sub-hero dark">
+<section class="sub-hero dark{' sub-hero--case' if s.get('hero_media') else ''}">
   <div class="wrap">
     <nav class="crumbs" aria-label="Brødsmuler">{crumb_html}</nav>
     <div class="depth">{esc(s["eyebrow"])}</div>
@@ -370,7 +385,7 @@ def page(s):
     <div class="ctas">
       <a class="btn btn--ore" href="/#kontakt">Start et prosjekt <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a>
       {hero_link(s)}
-    </div>
+    </div>{s.get('hero_media', '')}
   </div>
 </section>
 <div class="sub light">
@@ -434,7 +449,7 @@ def forside_artikler():
     kort = "\n".join(f'          <li><a href="{a["path"]}"><span class="rel__k">Artikkel</span>{esc(a["h1"])}</a></li>' for a in ART_SIDER[:3])
     return f'''      <div class="home-art reveal">
         <div class="home-art__head"><h3>Les mer i artiklene</h3><a href="/artikler/">Alle artikler →</a></div>
-        <ul class="rel">
+        <ul class="rel stagger">
 {kort}
         </ul>
       </div>
