@@ -103,6 +103,49 @@
     parUpdate();
   }
 
+  // Runde 4: fremdriftsstrek, rullende bånd, overskrifter, sjakta og lys som følger musa
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar = doc.createElement('div'); bar.className = 'progress'; bar.setAttribute('aria-hidden', 'true'); doc.body.appendChild(bar);
+  var shaft = doc.querySelector('.shaft'), steps = shaft ? [].slice.call(shaft.querySelectorAll('.step')) : [];
+  var st = false;
+  function scrollFx() {
+    st = false;
+    var de = doc.documentElement, max = de.scrollHeight - window.innerHeight;
+    bar.style.setProperty('--sp', max > 0 ? Math.min(1, window.scrollY / max).toFixed(4) : 0);
+    if (shaft) {
+      var r = shaft.getBoundingClientRect(), mid = window.innerHeight * .62;
+      var f = Math.max(0, Math.min(1, (mid - r.top) / r.height));
+      shaft.style.setProperty('--fill', calm ? 1 : f.toFixed(4));
+      steps.forEach(function (li) { li.classList.toggle('passed', calm || li.getBoundingClientRect().top + 20 < mid); });
+    }
+  }
+  window.addEventListener('scroll', function () { if (!st) { st = true; requestAnimationFrame(scrollFx); } }, { passive: true });
+  window.addEventListener('resize', scrollFx); scrollFx();
+
+  var core = doc.querySelector('.core ul');
+  if (core && !calm) {
+    [].slice.call(core.children).forEach(function (li) { var c = li.cloneNode(true); c.setAttribute('aria-hidden', 'true'); core.appendChild(c); });
+    core.classList.add('is-marquee');
+  }
+
+  var heads = doc.querySelectorAll('.layer-head');
+  if ('IntersectionObserver' in window) {
+    var ho = new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); ho.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    heads.forEach(function (h) { ho.observe(h); });
+  } else heads.forEach(function (h) { h.classList.add('in'); });
+
+  if (window.matchMedia('(hover: hover)').matches) {
+    doc.querySelectorAll('.svc, .person, .form').forEach(function (el) {
+      el.addEventListener('pointermove', function (e) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+  }
+
   // Kopier e-post
   var copyBtn = doc.getElementById('copyBtn'), msg = doc.getElementById('copyMsg'), mail = doc.getElementById('mail');
   if (copyBtn) copyBtn.addEventListener('click', function () {
