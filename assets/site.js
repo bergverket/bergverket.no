@@ -180,6 +180,7 @@
       f.side.value.trim() ? 'Nettside i dag: ' + f.side.value.trim() : '',
       '', 'Hilsen ' + f.navn.value.trim() + (f.firma.value.trim() ? ', ' + f.firma.value.trim() : '')
     ].filter(function (l, i, a) { return !(l === '' && a[i - 1] === ''); }).join('\n');
+    if (window.bvMal) window.bvMal('Lead', { kilde: 'skjema' });
     window.location.href = 'mailto:hei@bergverket.no?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 
     // Reserve hvis e-postprogrammet ikke åpner (vanlig med Gmail i nettleseren)

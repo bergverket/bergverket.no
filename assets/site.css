@@ -467,6 +467,9 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .consent a { color: var(--rock-ink); }
 .consent__btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .consent .btn { padding: 11px 16px; font-size: 15px; }
+.consent__btns--3 { grid-template-columns: 1fr 1fr 1fr; }
+.consent__btns--3 .btn { padding: 11px 8px; }
+@media (max-width: 420px) { .consent__btns--3 { grid-template-columns: 1fr; } }
 .consent .btn:hover { background: var(--rock-ink); color: var(--rock); border-color: var(--rock-ink); }
 .linkbtn { background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; text-decoration: none; }
 .linkbtn:hover { text-decoration: underline; }
