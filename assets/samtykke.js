@@ -2,7 +2,7 @@
    Google Analytics lastes BARE etter at den besøkende har trykket «Godta».
    Lim inn måle-ID-en fra Google Analytics her. Er den tom, vises ingen banner og ingenting lastes. */
 (function () {
-  var GA_ID = ''; // f.eks. 'G-ABC123XYZ'
+  var GA_ID = 'G-NTHLWEHQT3';
 
   var KEY = 'bv-samtykke', MAX_AGE = 365 * 24 * 3600 * 1000;
   var doc = document;
