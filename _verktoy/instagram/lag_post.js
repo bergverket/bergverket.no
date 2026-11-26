@@ -24,6 +24,8 @@ window.__bvPost = async function ({ kicker = '', title = [], body = '', foot = '
   x.fillStyle = BG; x.fill(new Path2D('M11.8 15.2h1.4v7.2h-1.4Z'));
   x.fillStyle = ORE; x.fill(new Path2D('m12.5 20.6 2.6 2.6-2.6 2.6-2.6-2.6Z')); x.restore();
   let y = 280; if (kicker) { t(kicker.toUpperCase(), 110, y, '500 34px ' + M, ORE, '5px'); y += 40; }
+  x.font = 'bold ' + size + 'px ' + D; const widest = Math.max(1, ...title.map(([s]) => x.measureText(s.toUpperCase()).width));
+  if (widest > 860) size = Math.floor(size * 860 / widest); // krymp til linjene passer
   const lh = size * 0.86;
   for (const [s, o] of title) { y += lh; t(s.toUpperCase(), 106, y, 'bold ' + size + 'px ' + D, o ? ORE : INK); }
   if (body) { // ombryt brødtekst
@@ -31,7 +33,7 @@ window.__bvPost = async function ({ kicker = '', title = [], body = '', foot = '
     for (const w of body.split(' ')) { const tryL = line ? line + ' ' + w : w; if (x.measureText(tryL).width > 860) { t(line, 110, y, '400 42px ' + S, '#b9bab5'); y += 58; line = w; } else line = tryL; }
     if (line) t(line, 110, y, '400 42px ' + S, '#b9bab5');
   }
-  t(foot, 110, 900, '500 34px ' + M, INK, '5px');
+  t(foot, 110, Math.max(y + 90, 820), '500 34px ' + M, INK, '5px'); // tekst bør slutte før ca. y=900 (fjellene)
   const blob = await new Promise(r => cv.toBlob(r, 'image/jpeg', 0.95));
   const file = new File([blob], 'bergverket-post.jpg', { type: 'image/jpeg' });
   const inp = [...document.querySelectorAll('input[type=file]')].filter(i => /video/.test(i.accept)).pop();
