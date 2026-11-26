@@ -3,22 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bergverket · Nettbutikker og nettsider som selger</title>
-<meta name="description" content="Bergverket lager nettbutikker i Shopify og nettsider for bedrifter som vil selge mer på nett. AI-agenter tar grovarbeidet, så du får mer gjort for pengene.">
+<title>Bergverket · Nettbyrå for nettbutikk i Shopify og nettside</title>
+<meta name="description" content="Bergverket er et norsk nettbyrå som lager nettbutikker i Shopify og nettsider for små bedrifter i hele Norge. AI-agenter tar grovarbeidet, så du får mer gjort for pengene.">
 <link rel="canonical" href="https://bergverket.no/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Bergverket">
 <meta name="theme-color" content="#101315">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nb_NO">
 <meta property="og:site_name" content="Bergverket">
 <meta property="og:title" content="Bergverket · Vi graver fram nettbutikker som selger">
-<meta property="og:description" content="Nettbutikker i Shopify, nettsider og AI-agenter som holder butikken i gang. To berg, ett verk.">
+<meta property="og:description" content="Norsk nettbyrå: nettbutikker i Shopify, nettsider og AI-agenter som holder butikken i gang. To berg, ett verk.">
 <meta property="og:url" content="https://bergverket.no/">
 <meta property="og:image" content="https://bergverket.no/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Bergverket. Vi graver fram nettbutikker som selger.">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/plain" href="https://bergverket.no/llms.txt" title="Bergverket for språkmodeller">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -29,19 +32,145 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Bergverket",
-  "url": "https://bergverket.no/",
-  "logo": "https://bergverket.no/apple-touch-icon.png",
-  "image": "https://bergverket.no/assets/og.jpg",
-  "email": "hei@bergverket.no",
-  "description": "Nettbutikker i Shopify, nettsider og automatisering med AI-agenter.",
-  "areaServed": "NO",
-  "founder": [
-    { "@type": "Person", "name": "Fabian Berg" },
-    { "@type": "Person", "name": "Viktor Mellberg" }
-  ],
-  "knowsAbout": ["Shopify", "Nettbutikk", "Nettside", "Søkemotoroptimalisering", "Automatisering", "AI-agenter"]
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://bergverket.no/#org",
+      "name": "Bergverket",
+      "alternateName": "Bergverket nettbyrå",
+      "url": "https://bergverket.no/",
+      "logo": "https://bergverket.no/icon-512.png",
+      "image": "https://bergverket.no/assets/og.jpg",
+      "email": "hei@bergverket.no",
+      "slogan": "Vi graver fram nettbutikker som selger.",
+      "description": "Bergverket er et norsk nettbyrå som lager nettbutikker i Shopify, nettsider og automatisering med AI-agenter for små bedrifter i hele Norge.",
+      "foundingDate": "2026",
+      "areaServed": { "@type": "Country", "name": "Norge" },
+      "availableLanguage": ["nb", "en"],
+      "founder": [
+        { "@type": "Person", "@id": "https://bergverket.no/#fabian", "name": "Fabian Berg", "jobTitle": "Medgründer, nettbutikk og markedsføring" },
+        { "@type": "Person", "@id": "https://bergverket.no/#viktor", "name": "Viktor Mellberg", "jobTitle": "Medgründer, teknologi og automatisering" }
+      ],
+      "knowsAbout": ["Shopify", "Nettbutikk", "Nettside", "Webdesign", "Søkemotoroptimalisering", "Netthandel", "Automatisering", "AI-agenter"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Tjenester",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nettbutikk i Shopify", "description": "Oppsett, tema og design, import av varer, betaling, frakt og vilkår på norsk, og opplæring." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nettside", "description": "Rask og mobilvennlig nettside som er lett å finne i Google." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatisering med AI-agenter", "description": "Agenter som skriver produkttekster, legger inn varer, sjekker butikken og lager ukesrapporter." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Synlighet og drift", "description": "SEO, Google, Facebook og Instagram koblet til butikken, måling og løpende forbedringer." } }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bergverket.no/#website",
+      "url": "https://bergverket.no/",
+      "name": "Bergverket",
+      "inLanguage": "nb-NO",
+      "publisher": { "@id": "https://bergverket.no/#org" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://bergverket.no/#webpage",
+      "url": "https://bergverket.no/",
+      "name": "Bergverket · Nettbyrå for nettbutikk i Shopify og nettside",
+      "isPartOf": { "@id": "https://bergverket.no/#website" },
+      "about": { "@id": "https://bergverket.no/#org" },
+      "inLanguage": "nb-NO",
+      "dateModified": "2026-11-26"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bergverket.no/#faq",
+      "isPartOf": {
+        "@id": "https://bergverket.no/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hvorfor Shopify?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shopify tar seg av drift, sikkerhet og betaling, så du slipper å tenke på servere og oppdateringer. Det er enkelt å bruke selv, og det fungerer godt med norske betalings- og fraktløsninger."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvor lang tid tar det?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Det kommer an på hvor mange varer du har og hvor klart innholdet er. Du får en tidsplan sammen med tilbudet etter første prat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva gjør AI-agentene, egentlig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De gjør faste oppgaver som ellers tar mye tid: skriver produkttekster, legger inn varer, sjekker butikken for feil og lager rapporter. Et menneske ser over før noe blir publisert eller sendt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvem eier butikken?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Du. Butikken, domenet og alle kontoer står i ditt navn. Vi får tilgang som medarbeidere, og du kan ta den fra oss når du vil."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan dere ta over en butikk jeg allerede har?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Vi kan forbedre en Shopify-butikk du har fra før, eller flytte varene dine over fra en annen løsning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Må jeg kunne noe teknisk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nei. Du får opplæring i det du trenger for å drive butikken selv, og vi er der hvis noe er uklart."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva er Bergverket?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bergverket er et norsk nettbyrå, startet i 2026 av Fabian Berg og Viktor Mellberg. Vi lager nettbutikker i Shopify og nettsider for små bedrifter, og bruker AI-agenter til faste oppgaver som produkttekster, vareimport og rapporter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jobber dere med bedrifter i hele Norge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Vi jobber digitalt, så det spiller ingen rolle hvor i landet du holder til. Den første nettbutikken vi bygde, for platesjappa On the Record, ligger i Trondheim."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hva koster det?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Det kommer an på hvor mange varer og sider du trenger, og hvor mye som skal automatiseres. Etter første prat får du et tilbud med pris og plan, så du vet hva det koster før vi begynner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan dere hjelpe meg å bli funnet på Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Alt vi lager får SEO på sider og produkter, raske sider og riktig oppsett for Google. Vi kan også koble Google, Facebook og Instagram til butikken og måle hva som virker."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>
@@ -399,6 +528,22 @@
           <summary>Må jeg kunne noe teknisk?</summary>
           <div class="a"><p>Nei. Du får opplæring i det du trenger for å drive butikken selv, og vi er der hvis noe er uklart.</p></div>
         </details>
+        <details>
+          <summary>Hva er Bergverket?</summary>
+          <div class="a"><p>Bergverket er et norsk nettbyrå, startet i 2026 av Fabian Berg og Viktor Mellberg. Vi lager nettbutikker i Shopify og nettsider for små bedrifter, og bruker AI-agenter til faste oppgaver som produkttekster, vareimport og rapporter.</p></div>
+        </details>
+        <details>
+          <summary>Jobber dere med bedrifter i hele Norge?</summary>
+          <div class="a"><p>Ja. Vi jobber digitalt, så det spiller ingen rolle hvor i landet du holder til. Den første nettbutikken vi bygde, for platesjappa On the Record, ligger i Trondheim.</p></div>
+        </details>
+        <details>
+          <summary>Hva koster det?</summary>
+          <div class="a"><p>Det kommer an på hvor mange varer og sider du trenger, og hvor mye som skal automatiseres. Etter første prat får du et tilbud med pris og plan, så du vet hva det koster før vi begynner.</p></div>
+        </details>
+        <details>
+          <summary>Kan dere hjelpe meg å bli funnet på Google?</summary>
+          <div class="a"><p>Ja. Alt vi lager får SEO på sider og produkter, raske sider og riktig oppsett for Google. Vi kan også koble Google, Facebook og Instagram til butikken og måle hva som virker.</p></div>
+        </details>
       </div>
     </div>
   </section>
@@ -469,7 +614,7 @@
           <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M1.5 28.5 12 8.5l5.2 9.6 4-6.1 9.3 16.5Z" fill="currentColor"/><path d="M11.2 15h1.6v8.6h-1.6Z" fill="#0a0c0e"/><path d="m12 21.3 3 3-3 3-3-3Z" fill="#e57a41"/></svg>
           Bergverket
         </a>
-        <p>Nettbutikker, nettsider og automatisering. To berg, ett verk.</p>
+        <p>Norsk nettbyrå for nettbutikker i Shopify, nettsider og automatisering med AI-agenter. For bedrifter i hele Norge. To berg, ett verk.</p>
       </div>
       <div>
         <h4>Sider</h4>
