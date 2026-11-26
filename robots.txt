@@ -1,3 +1,4 @@
+# Alle søkemotorer og AI-søk er velkomne.
 User-agent: *
 Allow: /
 

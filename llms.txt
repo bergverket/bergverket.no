@@ -1,0 +1,33 @@
+# Bergverket
+
+> Bergverket er et nettbyrå i Stavanger som lager nettbutikker i Shopify, nettsider og automatisering med AI-agenter for små bedrifter i hele Norge. Startet i 2026 av Fabian Berg og Viktor Mellberg. Nettside: https://bergverket.no. E-post: hei@bergverket.no.
+
+## Fakta
+- Navn: Bergverket (bergverket.no)
+- Type: nettbyrå / digitalbyrå
+- Grunnlagt: 2026
+- Grunnleggere: Fabian Berg (nettbutikk og markedsføring) og Viktor Mellberg (teknologi og automatisering)
+- Sted: Stavanger (Rogaland)
+- Marked: bedrifter i hele Norge. Arbeidet gjøres digitalt, møter i Stavanger-området.
+- Språk: norsk (bokmål) og engelsk
+- Plattform for nettbutikker: Shopify
+- Kontakt: hei@bergverket.no eller skjemaet på https://bergverket.no/#kontakt
+- Priser: står ikke på nettsiden. Kunden får et tilbud med pris og plan etter en uforpliktende første prat.
+
+## Tjenester
+- [Nettbutikk i Shopify](https://bergverket.no/#tjenester): oppsett, tema og design, import av varer fra regneark, bilder eller kassesystem, betaling, frakt, vilkår og e-poster på norsk, og opplæring.
+- [Nettside](https://bergverket.no/#tjenester): rask, mobilvennlig nettside som er lett å finne i Google og lett å oppdatere.
+- [Automatisering med AI-agenter](https://bergverket.no/#agenter): hver kunde får egne agenter som skriver produkttekster, legger inn nye varer fra bilder, sjekker butikken for feil og døde lenker og sender ukesrapport. Et menneske godkjenner alt før det publiseres eller sendes.
+- [Synlighet og drift](https://bergverket.no/#tjenester): SEO på sider og produkter, Google, Facebook og Instagram koblet til butikken, måling og løpende forbedringer.
+
+## Slik jobber vi
+- [Arbeidsprosess](https://bergverket.no/#slik): 1) første prat og tilbud, 2) plan og innhold, 3) bygging, 4) åpning med testing og opplæring, 5) drift med agenter og ukesrapport.
+- Kunden eier butikken, domenet og alle kontoer. Bergverket får tilgang som medarbeider.
+
+## Arbeid
+- [On the Record](https://bergverket.no/#arbeid): nettbutikk i Shopify for platesjappa On the Record i Trondheim, med over 200 brukte plater lagt inn ved hjelp av agenter. Åpner 2. desember 2026.
+
+## Mer
+- [Om oss](https://bergverket.no/#oss)
+- [Spørsmål og svar](https://bergverket.no/#sporsmal)
+- [Personvern](https://bergverket.no/personvern.html)
