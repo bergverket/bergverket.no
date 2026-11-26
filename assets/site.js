@@ -77,14 +77,6 @@
     catch (e) { fallback(); }
   });
 
-  // Prisknapper krysser av riktig valg i skjemaet
-  doc.querySelectorAll('[data-pick]').forEach(function (a) {
-    a.addEventListener('click', function () {
-      var box = doc.querySelector('#brief input[value="' + a.dataset.pick + '"]');
-      if (box) box.checked = true;
-    });
-  });
-
   // Skjema: lager en ferdig e-post
   var form = doc.getElementById('brief');
   if (form) form.addEventListener('submit', function (e) {
@@ -107,5 +99,18 @@
       '', 'Hilsen ' + f.navn.value.trim() + (f.firma.value.trim() ? ', ' + f.firma.value.trim() : '')
     ].filter(function (l, i, a) { return !(l === '' && a[i - 1] === ''); }).join('\n');
     window.location.href = 'mailto:hei@bergverket.no?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+    // Reserve hvis e-postprogrammet ikke åpner (vanlig med Gmail i nettleseren)
+    var sent = doc.getElementById('sent');
+    if (sent) {
+      doc.getElementById('gmailLink').href = 'https://mail.google.com/mail/?view=cm&fs=1&to=hei@bergverket.no&su=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var cb = doc.getElementById('copyBrief'), sm = doc.getElementById('sentMsg');
+      cb.onclick = function () {
+        var text = 'Til: hei@bergverket.no\nEmne: ' + subject + '\n\n' + body;
+        try { navigator.clipboard.writeText(text).then(function () { sm.textContent = 'Kopiert. Lim inn i en ny e-post til hei@bergverket.no.'; }, function () { sm.textContent = 'Fikk ikke kopiert. Skriv til hei@bergverket.no.'; }); }
+        catch (e2) { sm.textContent = 'Fikk ikke kopiert. Skriv til hei@bergverket.no.'; }
+      };
+      setTimeout(function () { sent.hidden = false; }, 600);
+    }
   });
 })();

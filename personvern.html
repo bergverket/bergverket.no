@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Personvern · Bergverket</title>
-<meta name="description" content="Hvordan bergverket.no behandler personopplysninger. Kort fortalt: ingen sporing, ingen informasjonskapsler.">
+<meta name="description" content="Hvordan bergverket.no behandler personopplysninger og informasjonskapsler. Vi måler bare besøk hvis du sier ja.">
 <meta name="theme-color" content="#101315">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://bergverket.no/personvern.html">
@@ -32,11 +32,15 @@
 <main class="page light" id="innhold">
   <div class="wrap">
     <div class="depth">Personvern</div>
-    <h1>Kort fortalt: vi sporer deg ikke</h1>
-    <p class="updated">Sist oppdatert 25. november 2026</p>
+    <h1>Kort fortalt: vi måler bare hvis du sier ja</h1>
+    <p class="updated">Sist oppdatert 26. november 2026</p>
 
-    <h2>Ingen informasjonskapsler</h2>
-    <p>bergverket.no bruker ikke informasjonskapsler (cookies), analyseverktøy eller annonsesporing. Skriftene ligger på vår egen server, så nettleseren din snakker ikke med Google eller andre når du besøker siden.</p>
+    <h2 id="informasjonskapsler">Informasjonskapsler og måling</h2>
+    <p>Vi vil gjerne vite hvordan siden brukes, så vi kan gjøre den bedre. Til det bruker vi Google Analytics, men bare hvis du trykker «Godta» i banneret. Trykker du «Avslå», eller ikke velger, lastes Google Analytics ikke, og ingen informasjonskapsler blir satt. Siden virker helt likt uansett.</p>
+    <p>Sier du ja, setter Google Analytics to informasjonskapsler: <code>_ga</code> og <code>_ga_&lt;id&gt;</code>. De skiller ett besøk fra et annet og varer i opptil 2 år. Vi ser tall som hvor mange som besøker siden, hvilke sider de ser på, omtrent hvor de er fra (land og by), hvilken enhet og nettleser de bruker og hvor de kom fra. Vi ser ikke hvem du er. Vi har skrudd av Googles annonsefunksjoner, og vi bruker ikke dataene til reklame.</p>
+    <p>Google Analytics leveres av Google Ireland Limited. Data kan bli behandlet av Google i USA, som er dekket av EUs rammeverk for dataoverføring til USA (EU-U.S. Data Privacy Framework). Les mer i <a href="https://business.safety.google/privacy/">Googles personvernerklæring for bedrifter</a>.</p>
+    <p>Grunnlaget for behandlingen er samtykket ditt. Du kan når som helst ombestemme deg: <button type="button" class="linkbtn" data-samtykke style="text-decoration:underline">endre valget ditt</button>. <span id="samtykkeStatus"></span></p>
+    <p>Valget ditt lagres i nettleseren din (ikke hos oss) i ett år, så vi slipper å spørre deg hver gang.</p>
 
     <h2>Skjemaet på forsiden</h2>
     <p>Kontaktskjemaet sender ingenting av seg selv. Det lager en ferdig e-post i ditt eget e-postprogram, og du velger selv om du vil sende den. Ingenting du skriver i skjemaet lagres på nettsiden.</p>
@@ -45,7 +49,7 @@
     <p>Sender du oss e-post, bruker vi navnet, e-postadressen og det du skriver bare til å svare deg og eventuelt lage et tilbud. Vi deler det ikke med andre. Du kan når som helst be oss slette det.</p>
 
     <h2>Drift av nettsiden</h2>
-    <p>Nettsiden ligger hos GitHub Pages. Som alle nettjenester kan GitHub registrere tekniske data som IP-adresse i sine serverlogger av sikkerhetshensyn. Les mer i <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubs personvernerklæring</a>.</p>
+    <p>Nettsiden ligger hos GitHub Pages. Som alle nettjenester kan GitHub registrere tekniske data som IP-adresse i sine serverlogger av sikkerhetshensyn. Skriftene ligger på vår egen server, så nettleseren din snakker ikke med andre enn GitHub når du besøker siden, med mindre du har godtatt måling. Les mer i <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubs personvernerklæring</a>.</p>
 
     <h2>Kontakt</h2>
     <p>Spørsmål om personvern? Skriv til <a href="mailto:hei@bergverket.no">hei@bergverket.no</a>. Behandlingsansvarlig er Bergverket ved Fabian Berg og Viktor Mellberg.</p>
@@ -59,5 +63,6 @@
     </div>
   </div>
 </footer>
+<script src="assets/samtykke.js" defer></script>
 </body>
 </html>

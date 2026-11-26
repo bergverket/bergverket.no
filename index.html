@@ -28,6 +28,7 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="assets/fonts/big-shoulders.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plex-sans.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className+=" js"</script>
 <link rel="stylesheet" href="assets/site.css">
 <script type="application/ld+json">
 {
@@ -173,6 +174,70 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Hvorfor Shopify?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Shopify tar seg av drift, sikkerhet og betaling, så du slipper å tenke på servere og oppdateringer. Det er enkelt å bruke selv, og det fungerer godt med norske betalings- og fraktløsninger."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hva koster det?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Det kommer an på hva du trenger. Etter første prat får du et forslag med pris og plan, og vi starter ikke før du har sagt ja. Shopify, apper og domene betaler du selv, direkte til dem, så du ser hva alt koster."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvor lang tid tar det?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Det kommer an på hvor mange varer du har og hvor klart innholdet er. Du får en tidsplan sammen med tilbudet etter første prat."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hva gjør AI-agentene, egentlig?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "De gjør faste oppgaver som ellers tar mye tid: skriver produkttekster, legger inn varer, sjekker butikken for feil og lager rapporter. Et menneske ser over før noe blir publisert eller sendt."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvem eier butikken?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Du. Butikken, domenet og alle kontoer står i ditt navn. Vi får tilgang som medarbeidere, og du kan ta den fra oss når du vil."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kan dere ta over en butikk jeg allerede har?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. Vi kan forbedre en Shopify-butikk du har fra før, eller flytte varene dine over fra en annen løsning."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Må jeg kunne noe teknisk?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nei. Du får opplæring i det du trenger for å drive butikken selv, og vi er der hvis noe er uklart."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#innhold">Hopp til innholdet</a>
@@ -183,6 +248,7 @@
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M1.5 28.5 12 8.5l5.2 9.6 4-6.1 9.3 16.5Z" fill="currentColor"/><path d="M11.2 15h1.6v8.6h-1.6Z" fill="#101315"/><path d="m12 21.3 3 3-3 3-3-3Z" fill="#e57a41"/></svg>
       Bergverket
     </a>
+    <a class="btn btn--ore top-cta" href="#kontakt">Kontakt</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meny"><span aria-hidden="true"></span>Meny</button>
     <nav class="nav" id="meny" aria-label="Hovedmeny">
       <a href="#tjenester">Tjenester</a>
@@ -509,6 +575,10 @@
           <div class="a"><p>Shopify tar seg av drift, sikkerhet og betaling, så du slipper å tenke på servere og oppdateringer. Det er enkelt å bruke selv, og det fungerer godt med norske betalings- og fraktløsninger.</p></div>
         </details>
         <details>
+          <summary>Hva koster det?</summary>
+          <div class="a"><p>Det kommer an på hva du trenger. Etter første prat får du et forslag med pris og plan, og vi starter ikke før du har sagt ja. Shopify, apper og domene betaler du selv, direkte til dem, så du ser hva alt koster.</p></div>
+        </details>
+        <details>
           <summary>Hvor lang tid tar det?</summary>
           <div class="a"><p>Det kommer an på hvor mange varer du har og hvor klart innholdet er. Du får en tidsplan sammen med tilbudet etter første prat.</p></div>
         </details>
@@ -600,6 +670,14 @@
           <button class="btn btn--ore" type="submit">Lag e-post til oss
             <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></button>
           <p class="fine">Knappen åpner e-postprogrammet ditt med alt ferdig utfylt. Ingenting lagres på denne siden.</p>
+          <div class="sent" id="sent" hidden tabindex="-1">
+            <p><b>Åpnet ikke e-posten seg?</b> Send den fra Gmail, eller kopier teksten og send den til hei@bergverket.no.</p>
+            <div class="sent__btns">
+              <a class="btn btn--ghost" id="gmailLink" href="#" target="_blank" rel="noopener">Åpne i Gmail</a>
+              <button class="btn btn--ghost" id="copyBrief" type="button">Kopier teksten</button>
+            </div>
+            <p class="status" id="sentMsg" aria-live="polite"></p>
+          </div>
         </form>
       </div>
     </div>
@@ -617,19 +695,21 @@
         <p>Norsk nettbyrå for nettbutikker i Shopify, nettsider og automatisering med AI-agenter. For bedrifter i hele Norge. To berg, ett verk.</p>
       </div>
       <div>
-        <h4>Sider</h4>
+        <h2 class="foot-h">Sider</h2>
         <ul>
           <li><a href="#tjenester">Tjenester</a></li>
           <li><a href="#slik">Slik jobber vi</a></li>
+          <li><a href="#arbeid" data-needs="arbeid">Arbeid</a></li>
           <li><a href="#sporsmal">Spørsmål</a></li>
           <li><a href="#oss">Om oss</a></li>
         </ul>
       </div>
       <div>
-        <h4>Kontakt</h4>
+        <h2 class="foot-h">Kontakt</h2>
         <ul>
           <li><a href="mailto:hei@bergverket.no">hei@bergverket.no</a></li>
           <li><a href="personvern.html">Personvern</a></li>
+          <li><button type="button" class="linkbtn" data-samtykke>Informasjonskapsler</button></li>
         </ul>
       </div>
     </div>
@@ -641,5 +721,6 @@
 </footer>
 
 <script src="assets/site.js" defer></script>
+<script src="assets/samtykke.js" defer></script>
 </body>
 </html>
